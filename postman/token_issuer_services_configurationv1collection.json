@@ -1,0 +1,510 @@
+{
+  "info": {
+    "name": "token_issuer_services_configuration v1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Key Value Map",
+      "item": [
+        {
+          "name": "Create: Key Value Map",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "name": "Content-Type",
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"{{kvm.name}}\",\n    \"encrypted\": \"false\",\n    \"entry\": [\n        {\n            \"name\": \"pathCore\",\n            \"value\": \"{{kvm.pathCore}}\"\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api.enterprise.apigee.com/v1/organizations/{{organization}}/environments/{{environment}}/keyvaluemaps",
+              "protocol": "https",
+              "host": [
+                "api",
+                "enterprise",
+                "apigee",
+                "com"
+              ],
+              "path": [
+                "v1",
+                "organizations",
+                "{{organization}}",
+                "environments",
+                "{{environment}}",
+                "keyvaluemaps"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update: Key Value Map",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "name": "Content-Type",
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"{{kvm.name}}\",\n    \"encrypted\": \"false\",\n    \"entry\": [\n        {\n            \"name\": \"pathCore\",\n            \"value\": \"{{kvm.pathCore}}\"\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api.enterprise.apigee.com/v1/organizations/{{organization}}/environments/{{environment}}/keyvaluemaps/{{kvm.name}}",
+              "protocol": "https",
+              "host": [
+                "api",
+                "enterprise",
+                "apigee",
+                "com"
+              ],
+              "path": [
+                "v1",
+                "organizations",
+                "{{organization}}",
+                "environments",
+                "{{environment}}",
+                "keyvaluemaps",
+                "{{kvm.name}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete: Key Value Map",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "name": "Content-Type",
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://api.enterprise.apigee.com/v1/organizations/{{organization}}/environments/{{environment}}/keyvaluemaps/{{kvm.name}}",
+              "protocol": "https",
+              "host": [
+                "api",
+                "enterprise",
+                "apigee",
+                "com"
+              ],
+              "path": [
+                "v1",
+                "organizations",
+                "{{organization}}",
+                "environments",
+                "{{environment}}",
+                "keyvaluemaps",
+                "{{kvm.name}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Target Server",
+      "item": [
+        {
+          "name": "Create: Target Server",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "name": "Content-Type",
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"{{targetServer.name}}\",\n    \"host\": \"{{targetServer.host}}\",\n    \"isEnabled\": true,\n    \"port\": \"{{targetServer.port}}\",\n    \"sSLInfo\": {\n        \"enabled\": true\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api.enterprise.apigee.com/v1/organizations/{{organization}}/environments/{{environment}}/targetservers",
+              "protocol": "https",
+              "host": [
+                "api",
+                "enterprise",
+                "apigee",
+                "com"
+              ],
+              "path": [
+                "v1",
+                "organizations",
+                "{{organization}}",
+                "environments",
+                "{{environment}}",
+                "targetservers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update: Target Server",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "name": "Content-Type",
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"{{targetServer.name}}\",\n    \"host\": \"{{targetServer.host}}\",\n    \"isEnabled\": true,\n    \"port\": \"{{targetServer.port}}\",\n    \"sSLInfo\": {\n        \"enabled\": true\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api.enterprise.apigee.com/v1/organizations/{{organization}}/environments/{{environment}}/targetservers/{{targetServer.name}}",
+              "protocol": "https",
+              "host": [
+                "api",
+                "enterprise",
+                "apigee",
+                "com"
+              ],
+              "path": [
+                "v1",
+                "organizations",
+                "{{organization}}",
+                "environments",
+                "{{environment}}",
+                "targetservers",
+                "{{targetServer.name}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete: Target Server",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "name": "Content-Type",
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"{{targetServer.name}}\",\n    \"host\": \"{{targetServer.host}}\",\n    \"isEnabled\": true,\n    \"port\": \"{{targetServer.port}}\",\n    \"sSLInfo\": {\n        \"enabled\": true\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api.enterprise.apigee.com/v1/organizations/{{organization}}/environments/{{environment}}/targetservers/{{targetServer.name}}",
+              "protocol": "https",
+              "host": [
+                "api",
+                "enterprise",
+                "apigee",
+                "com"
+              ],
+              "path": [
+                "v1",
+                "organizations",
+                "{{organization}}",
+                "environments",
+                "{{environment}}",
+                "targetservers",
+                "{{targetServer.name}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Product",
+      "item": [
+        {
+          "name": "Create: Product",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "name": "Content-Type",
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"apiResources\": [\r\n        \"/**\"\r\n    ],\r\n    \"approvalType\": \"auto\",\r\n    \"attributes\": [\r\n        {\r\n            \"name\": \"MINT_CUSTOM_ATTRIBUTE_1\",\r\n            \"value\": \"Partner_id\"\r\n        },\r\n        {\r\n            \"name\": \"MINT_CUSTOM_ATTRIBUTE_2\",\r\n            \"value\": \"CUIT\"\r\n        },\r\n        {\r\n            \"name\": \"MINT_TRANSACTION_SUCCESS_CRITERIA\",\r\n            \"value\": \"txProviderStatus == '200'\"\r\n        },\r\n        {\r\n            \"name\": \"access\",\r\n            \"value\": \"{{product.access}}\"\r\n        },\r\n        {\r\n            \"name\": \"availableFor\",\r\n            \"value\": \"{{product.availableFor}}\"\r\n        },\r\n        {\r\n            \"name\": \"brands\",\r\n            \"value\": \"{{product.brands}}\"\r\n        },\r\n        {\r\n            \"name\": \"categories\",\r\n            \"value\": \"{{product.categories}}\"\r\n        },\r\n        {\r\n            \"name\": \"mostSearched\",\r\n            \"value\": \"{{product.mostSearched}}\"\r\n        },\r\n        {\r\n            \"name\": \"product\",\r\n            \"value\": \"{{product.product}}\"\r\n        },\r\n        {\r\n            \"name\": \"restricted\",\r\n            \"value\": \"{{product.restricted}}\"\r\n        },\r\n        {\r\n            \"name\": \"securityLevel\",\r\n            \"value\": \"{{product.securityLevel}}\"\r\n        },\r\n        {\r\n            \"name\": \"swagger\",\r\n            \"value\": \"{{product.swagger}}\"\r\n        },\r\n        {\r\n            \"name\": \"tags\",\r\n            \"value\": \"{{product.tags}}\"\r\n        },\r\n        {\r\n            \"name\": \"type\",\r\n            \"value\": \"{{product.type}}\"\r\n        },\r\n        {\r\n            \"name\": \"visibility\",\r\n            \"value\": \"All\"\r\n        },\r\n        {\r\n            \"name\": \"versionDescription\",\r\n            \"value\": \"{{product.versionDescription}}\"\r\n        },\r\n        {\r\n            \"name\": \"versionNumber\",\r\n            \"value\": \"{{product.version}}\"\r\n        },\r\n        {\r\n            \"name\": \"versionStatus\",\r\n            \"value\": \"{{product.status}}\"\r\n        },\r\n        {\r\n            \"name\": \"transactionRecordingPolicies\",\r\n            \"value\": \"[{\\\"name\\\":\\\"/**\\\",\\\"policies\\\":{\\\"request\\\":[],\\\"response\\\":[\\\"{\\\\\\\"policyType\\\\\\\":\\\\\\\"ExtractVariables\\\\\\\",\\\\\\\"async\\\\\\\":false,\\\\\\\"continueOnError\\\\\\\":false,\\\\\\\"displayName\\\\\\\":\\\\\\\"Transaction Policy\\\\\\\",\\\\\\\"enabled\\\\\\\":true,\\\\\\\"faultRules\\\\\\\":[],\\\\\\\"ignoreUnresolvedVariables\\\\\\\":true,\\\\\\\"jSONPayload\\\\\\\":{\\\\\\\"variable\\\\\\\":[]},\\\\\\\"name\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"source\\\\\\\":{\\\\\\\"clearPayload\\\\\\\":false,\\\\\\\"value\\\\\\\":\\\\\\\"response\\\\\\\"},\\\\\\\"variablePrefix\\\\\\\":\\\\\\\"apigee\\\\\\\",\\\\\\\"xMLPayload\\\\\\\":{\\\\\\\"namespaces\\\\\\\":[],\\\\\\\"stopPayloadProcessing\\\\\\\":false,\\\\\\\"variable\\\\\\\":[]},\\\\\\\"extractions\\\\\\\":[{\\\\\\\"CollectionHeader\\\\\\\":{\\\\\\\"name\\\\\\\":\\\\\\\"status.code\\\\\\\",\\\\\\\"pattern\\\\\\\":[{\\\\\\\"ignoreCase\\\\\\\":true,\\\\\\\"value\\\\\\\":\\\\\\\"{mint.tx.status}\\\\\\\"}]}},{\\\\\\\"Variable\\\\\\\":{\\\\\\\"name\\\\\\\":\\\\\\\"monetization_partner_id\\\\\\\",\\\\\\\"pattern\\\\\\\":[{\\\\\\\"ignoreCase\\\\\\\":true,\\\\\\\"value\\\\\\\":\\\\\\\"{mint.tx.cust_att1}\\\\\\\"}]}},{\\\\\\\"Variable\\\\\\\":{\\\\\\\"name\\\\\\\":\\\\\\\"monetization_cuit\\\\\\\",\\\\\\\"pattern\\\\\\\":[{\\\\\\\"ignoreCase\\\\\\\":true,\\\\\\\"value\\\\\\\":\\\\\\\"{mint.tx.cust_att2}\\\\\\\"}]}}]}\\\"]}}]\"\r\n        }\r\n    ],\r\n    \"description\": \"{{product.description}}\",\r\n    \"displayName\": \"{{product.displayName}}\",\r\n    \"environments\": [\r\n        \"{{environment}}\"\r\n    ],\r\n    \"name\": \"{{product.name}}\",\r\n    \"proxies\": [\r\n        \"{{product.proxies}}\"\r\n    ],\r\n    \"scopes\": [\r\n        \"\"\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api.enterprise.apigee.com/v1/organizations/{{organization}}/apiproducts",
+              "protocol": "https",
+              "host": [
+                "api",
+                "enterprise",
+                "apigee",
+                "com"
+              ],
+              "path": [
+                "v1",
+                "organizations",
+                "{{organization}}",
+                "apiproducts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update: Product",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "name": "Content-Type",
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"apiResources\": [\r\n        \"/**\"\r\n    ],\r\n    \"approvalType\": \"auto\",\r\n    \"attributes\": [\r\n        {\r\n            \"name\": \"MINT_CUSTOM_ATTRIBUTE_1\",\r\n            \"value\": \"Partner_id\"\r\n        },\r\n        {\r\n            \"name\": \"MINT_CUSTOM_ATTRIBUTE_2\",\r\n            \"value\": \"CUIT\"\r\n        },\r\n        {\r\n            \"name\": \"MINT_TRANSACTION_SUCCESS_CRITERIA\",\r\n            \"value\": \"txProviderStatus == '200'\"\r\n        },\r\n        {\r\n            \"name\": \"access\",\r\n            \"value\": \"{{product.access}}\"\r\n        },\r\n        {\r\n            \"name\": \"availableFor\",\r\n            \"value\": \"{{product.availableFor}}\"\r\n        },\r\n        {\r\n            \"name\": \"brands\",\r\n            \"value\": \"{{product.brands}}\"\r\n        },\r\n        {\r\n            \"name\": \"categories\",\r\n            \"value\": \"{{product.categories}}\"\r\n        },\r\n        {\r\n            \"name\": \"mostSearched\",\r\n            \"value\": \"{{product.mostSearched}}\"\r\n        },\r\n        {\r\n            \"name\": \"product\",\r\n            \"value\": \"{{product.product}}\"\r\n        },\r\n        {\r\n            \"name\": \"restricted\",\r\n            \"value\": \"{{product.restricted}}\"\r\n        },\r\n        {\r\n            \"name\": \"securityLevel\",\r\n            \"value\": \"{{product.securityLevel}}\"\r\n        },\r\n        {\r\n            \"name\": \"swagger\",\r\n            \"value\": \"{{product.swagger}}\"\r\n        },\r\n        {\r\n            \"name\": \"tags\",\r\n            \"value\": \"{{product.tags}}\"\r\n        },\r\n        {\r\n            \"name\": \"type\",\r\n            \"value\": \"{{product.type}}\"\r\n        },\r\n        {\r\n            \"name\": \"visibility\",\r\n            \"value\": \"All\"\r\n        },\r\n        {\r\n            \"name\": \"versionDescription\",\r\n            \"value\": \"{{product.versionDescription}}\"\r\n        },\r\n        {\r\n            \"name\": \"versionNumber\",\r\n            \"value\": \"{{product.version}}\"\r\n        },\r\n        {\r\n            \"name\": \"versionStatus\",\r\n            \"value\": \"{{product.status}}\"\r\n        },\r\n        {\r\n            \"name\": \"transactionRecordingPolicies\",\r\n            \"value\": \"[{\\\"name\\\":\\\"/**\\\",\\\"policies\\\":{\\\"request\\\":[],\\\"response\\\":[\\\"{\\\\\\\"policyType\\\\\\\":\\\\\\\"ExtractVariables\\\\\\\",\\\\\\\"async\\\\\\\":false,\\\\\\\"continueOnError\\\\\\\":false,\\\\\\\"displayName\\\\\\\":\\\\\\\"Transaction Policy\\\\\\\",\\\\\\\"enabled\\\\\\\":true,\\\\\\\"faultRules\\\\\\\":[],\\\\\\\"ignoreUnresolvedVariables\\\\\\\":true,\\\\\\\"jSONPayload\\\\\\\":{\\\\\\\"variable\\\\\\\":[]},\\\\\\\"name\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"source\\\\\\\":{\\\\\\\"clearPayload\\\\\\\":false,\\\\\\\"value\\\\\\\":\\\\\\\"response\\\\\\\"},\\\\\\\"variablePrefix\\\\\\\":\\\\\\\"apigee\\\\\\\",\\\\\\\"xMLPayload\\\\\\\":{\\\\\\\"namespaces\\\\\\\":[],\\\\\\\"stopPayloadProcessing\\\\\\\":false,\\\\\\\"variable\\\\\\\":[]},\\\\\\\"extractions\\\\\\\":[{\\\\\\\"CollectionHeader\\\\\\\":{\\\\\\\"name\\\\\\\":\\\\\\\"status.code\\\\\\\",\\\\\\\"pattern\\\\\\\":[{\\\\\\\"ignoreCase\\\\\\\":true,\\\\\\\"value\\\\\\\":\\\\\\\"{mint.tx.status}\\\\\\\"}]}},{\\\\\\\"Variable\\\\\\\":{\\\\\\\"name\\\\\\\":\\\\\\\"monetization_partner_id\\\\\\\",\\\\\\\"pattern\\\\\\\":[{\\\\\\\"ignoreCase\\\\\\\":true,\\\\\\\"value\\\\\\\":\\\\\\\"{mint.tx.cust_att1}\\\\\\\"}]}},{\\\\\\\"Variable\\\\\\\":{\\\\\\\"name\\\\\\\":\\\\\\\"monetization_cuit\\\\\\\",\\\\\\\"pattern\\\\\\\":[{\\\\\\\"ignoreCase\\\\\\\":true,\\\\\\\"value\\\\\\\":\\\\\\\"{mint.tx.cust_att2}\\\\\\\"}]}}]}\\\"]}}]\"\r\n        }\r\n    ],\r\n    \"description\": \"{{product.description}}\",\r\n    \"displayName\": \"{{product.displayName}}\",\r\n    \"environments\": [\r\n        \"{{environment}}\"\r\n    ],\r\n    \"name\": \"{{product.name}}\",\r\n    \"proxies\": [\r\n        \"{{product.proxies}}\"\r\n    ],\r\n    \"scopes\": [\r\n        \"\"\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api.enterprise.apigee.com/v1/organizations/{{organization}}/apiproducts/{{product.name}}",
+              "protocol": "https",
+              "host": [
+                "api",
+                "enterprise",
+                "apigee",
+                "com"
+              ],
+              "path": [
+                "v1",
+                "organizations",
+                "{{organization}}",
+                "apiproducts",
+                "{{product.name}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete: Product",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "name": "Content-Type",
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://api.enterprise.apigee.com/v1/organizations/{{organization}}/apiproducts/{{product.name}}",
+              "protocol": "https",
+              "host": [
+                "api",
+                "enterprise",
+                "apigee",
+                "com"
+              ],
+              "path": [
+                "v1",
+                "organizations",
+                "{{organization}}",
+                "apiproducts",
+                "{{product.name}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "organization",
+      "value": "prisma-d",
+      "type": "string"
+    },
+    {
+      "key": "environment",
+      "value": "dev",
+      "type": "string"
+    },
+    {
+      "key": "product.access",
+      "value": "public",
+      "type": "string"
+    },
+    {
+      "key": "product.availableFor",
+      "value": "Bancos",
+      "type": "string"
+    },
+    {
+      "key": "product.brands",
+      "value": "PRISMA",
+      "type": "string"
+    },
+    {
+      "key": "product.categories",
+      "value": "servicios",
+      "type": "string"
+    },
+    {
+      "key": "product.description",
+      "value": "Configuración del proceso de tokenización. La API Token Issuer Services permite a las entidades bancarias decidir sobre como se realizará la tokenización de tarjetas.",
+      "type": "string"
+    },
+    {
+      "key": "product.mostSearched",
+      "value": "true",
+      "type": "string"
+    },
+    {
+      "key": "product.product",
+      "value": "Token Issuer Services",
+      "type": "string"
+    },
+    {
+      "key": "product.proxies",
+      "value": "token_issuer_services_partner_api_ps_v1",
+      "type": "string"
+    },
+    {
+      "key": "product.restricted",
+      "value": "false",
+      "type": "string"
+    },
+    {
+      "key": "product.securityLevel",
+      "value": "OAuth2.2legged",
+      "type": "string"
+    },
+    {
+      "key": "product.status",
+      "value": "ACTIVE",
+      "type": "string"
+    },
+    {
+      "key": "product.tags",
+      "value": "tokenization, tokenización, cards, tarjetas",
+      "type": "string"
+    },
+    {
+      "key": "product.type",
+      "value": "Partner (Bancos)",
+      "type": "string"
+    },
+    {
+      "key": "product.version",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "product.versionDescription",
+      "value": "2020, 27 de Octuber Version inicial",
+      "type": "string"
+    },
+    {
+      "key": "targetServer.name",
+      "value": "token_issuer_services_configuration.core",
+      "type": "string"
+    },
+    {
+      "key": "targetServer.host",
+      "value": "developers-dev.prismamediosdepago.com",
+      "type": "string"
+    },
+    {
+      "key": "targetServer.port",
+      "value": "8127",
+      "type": "string"
+    },
+    {
+      "key": "kvm.name",
+      "value": "token_issuer_services_configuration",
+      "type": "string"
+    },
+    {
+      "key": "kvm.pathCore",
+      "value": "/v1/core/tokenization_services/token_issuer_services",
+      "type": "string"
+    },
+    {
+      "key": "product.swagger",
+      "value": "{{product.product}}_v{{product.version}}",
+      "type": "string"
+    },
+    {
+      "key": "product.displayName",
+      "value": "{{product.product}}-v{{product.version}}-{{environment}}",
+      "type": "string"
+    },
+    {
+      "key": "product.name",
+      "value": "{{product.product}}_v{{product.version}}_{{environment}}",
+      "type": "string"
+    }
+  ]
+}
