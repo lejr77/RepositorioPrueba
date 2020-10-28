@@ -1,0 +1,1595 @@
+{
+	"info": {
+		"_postman_id": "3d48e73e-823b-4503-bc1a-8d55a01ced33",
+		"name": "Commercial Cards Prepaid",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Métodos",
+			"item": [
+				{
+					"name": "POST /transfers",
+					"item": [
+						{
+							"name": "transfers",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b24801c6-97a0-47e8-8c87-5bf8d77b6b31",
+										"exec": [
+											"var data = JSON.parse(responseBody);\r",
+											"pm.globals.set(\"id\", data.transfer_id);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"account\":\r\n  {\r\n    \"user\": \"1975488\",\r\n    \"source_account_number\": \"0132558040\",\r\n    \"destination_account_number\": \"0154339942\",\r\n    \"company_id\": \"MIJU\"\r\n  },\r\n  \"amount\": 100.00,\r\n  \"transfer_type\": \"TRANSFER\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers?bank_code=14",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "14"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "GET /transfers/{id}",
+					"item": [
+						{
+							"name": "transfers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers/:id?bank_code=14&company_id =MIJU",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers",
+										":id"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "14"
+										},
+										{
+											"key": "company_id ",
+											"value": "MIJU"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "{{id}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "GET /account/validations",
+					"item": [
+						{
+							"name": "account",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/commercial_cards/prepaid/account/validations/?account_number=&bank_code=&user_id&company_id&account_to_validate&cost_center_id",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"account",
+										"validations",
+										""
+									],
+									"query": [
+										{
+											"key": "account_number",
+											"value": ""
+										},
+										{
+											"key": "bank_code",
+											"value": ""
+										},
+										{
+											"key": "user_id",
+											"value": null
+										},
+										{
+											"key": "company_id",
+											"value": null
+										},
+										{
+											"key": "account_to_validate",
+											"value": null
+										},
+										{
+											"key": "cost_center_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "GET /transfers/validations",
+					"item": [
+						{
+							"name": "transfers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers/validations/?transfer_id=&bank_code=&company_id",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers",
+										"validations",
+										""
+									],
+									"query": [
+										{
+											"key": "transfer_id",
+											"value": ""
+										},
+										{
+											"key": "bank_code",
+											"value": ""
+										},
+										{
+											"key": "company_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "echoTest",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ed29279a-0b7f-4048-9ff5-2287d5fcb1cd",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/commercial_cards/prepaid/echoTest/:var",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"commercial_cards",
+								"prepaid",
+								"echoTest",
+								":var"
+							],
+							"variable": [
+								{
+									"key": "var",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "echo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4c9408e1-7d6c-45ea-838d-fde81ef8b0cb",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/commercial_cards/prepaid/echo/:var",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"commercial_cards",
+								"prepaid",
+								"echo",
+								":var"
+							],
+							"variable": [
+								{
+									"key": "var",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api-docs",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b4b28b09-f66d-4690-9631-66fd3c4c6e79",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/commercial_cards/prepaid/api-docs",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"commercial_cards",
+								"prepaid",
+								"api-docs"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Swagger",
+			"item": [
+				{
+					"name": "POST /transfers",
+					"item": [
+						{
+							"name": "Caso 200",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "8fadd0e1-08c9-4bf6-acfe-d769cc5bbba7",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"account\":\r\n    {\r\n        \"user\": \"1975488\",\r\n        \"source_account_number\": \"0132558040\",\r\n        \"destination_account_number\": \"0154339942\",\r\n        \"company_id\": \"MIJU\"\r\n    },\r\n    \"amount\": 100.0,\r\n    \"transfer_type\": \"TRANSFER\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers?bank_code=14",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "14"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Caso 400",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "7c7c9df3-ca64-4b5b-a1b9-7de97b36ecab",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"account\":\r\n    {\r\n        \"user\": \"2975488\",\r\n        \"source_account_number\": \"0132558040\",\r\n        \"destination_account_number\": \"0154339942\",\r\n        \"company_id\": \"MIJU\"\r\n    },\r\n    \"amount\": 100.0,\r\n    \"transfer_type\": \"TRANSFER\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers?bank_code=14",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "14"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Caso 400_2",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "2f4806a7-5813-4815-a8a5-2a15c233acc6",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"account\":\r\n    {\r\n        \"user\": \"3975488\",\r\n        \"source_account_number\": \"0132558040\",\r\n        \"destination_account_number\": \"0154339942\",\r\n        \"company_id\": \"MIJU\"\r\n    },\r\n    \"amount\": 100.0,\r\n    \"transfer_type\": \"TRANSFER\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers?bank_code=14",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "14"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Caso 401",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "54d04e87-2d79-4078-b901-b9baf510d0af",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"account\":\r\n    {\r\n        \"user\": \"4975488\",\r\n        \"source_account_number\": \"0132558040\",\r\n        \"destination_account_number\": \"0154339942\",\r\n        \"company_id\": \"MIJU\"\r\n    },\r\n    \"amount\": 100.0,\r\n    \"transfer_type\": \"TRANSFER\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers?bank_code=14",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "14"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Caso 403",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a7eacd29-211a-4737-ae9e-6f2b62310384",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"account\":\r\n    {\r\n        \"user\": \"5975488\",\r\n        \"source_account_number\": \"0132558040\",\r\n        \"destination_account_number\": \"0154339942\",\r\n        \"company_id\": \"MIJU\"\r\n    },\r\n    \"amount\": 100.0,\r\n    \"transfer_type\": \"TRANSFER\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers?bank_code=14",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "14"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Caso 404",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "665a4f3f-377d-4999-872d-13298336bd97",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"account\":\r\n    {\r\n        \"user\": \"6975488\",\r\n        \"source_account_number\": \"0132558040\",\r\n        \"destination_account_number\": \"0154339942\",\r\n        \"company_id\": \"MIJU\"\r\n    },\r\n    \"amount\": 100.0,\r\n    \"transfer_type\": \"TRANSFER\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers?bank_code=14",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "14"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Caso 500",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "d5376063-fbeb-4ca3-ae47-3fb6b97cb12a",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"account\":\r\n    {\r\n        \"user\": \"7975488\",\r\n        \"source_account_number\": \"0132558040\",\r\n        \"destination_account_number\": \"0154339942\",\r\n        \"company_id\": \"MIJU\"\r\n    },\r\n    \"amount\": 100.0,\r\n    \"transfer_type\": \"TRANSFER\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers?bank_code=14",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "14"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Caso 502",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "5663bf16-d65c-4c76-8f0e-8b0320f53ad8",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"account\":\r\n    {\r\n        \"user\": \"8975488\",\r\n        \"source_account_number\": \"0132558040\",\r\n        \"destination_account_number\": \"0154339942\",\r\n        \"company_id\": \"MIJU\"\r\n    },\r\n    \"amount\": 100.0,\r\n    \"transfer_type\": \"TRANSFER\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers?bank_code=14",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "14"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Caso 503",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "5f2ac0d9-579d-4895-ac84-eb05dcc22a18",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"account\":\r\n    {\r\n        \"user\": \"9975488\",\r\n        \"source_account_number\": \"0132558040\",\r\n        \"destination_account_number\": \"0154339942\",\r\n        \"company_id\": \"MIJU\"\r\n    },\r\n    \"amount\": 100.0,\r\n    \"transfer_type\": \"TRANSFER\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers?bank_code=14",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "14"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Caso 504",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c527f894-3524-42b9-b234-88fe3438dfcc",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"account\":\r\n    {\r\n        \"user\": \"975488\",\r\n        \"source_account_number\": \"0132558040\",\r\n        \"destination_account_number\": \"0154339942\",\r\n        \"company_id\": \"MIJU\"\r\n    },\r\n    \"amount\": 100.0,\r\n    \"transfer_type\": \"TRANSFER\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers?bank_code=14",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "14"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "133bc61e-9bdc-46a4-b3fd-daa09210d2d3",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "9591bb0c-73e3-4519-8820-110fa2b394ab",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "GET /transfers/{id}",
+					"item": [
+						{
+							"name": "Caso 200",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers/:id?bank_code=070&company_id=MIJU",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers",
+										":id"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "070"
+										},
+										{
+											"key": "company_id",
+											"value": "MIJU"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1496386"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Caso 400",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers/:id?bank_code=070&company_id=MIJU",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers",
+										":id"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "070"
+										},
+										{
+											"key": "company_id",
+											"value": "MIJU"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2496386"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Caso 401",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers/:id?bank_code=077&company_id=MIJU",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers",
+										":id"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "077"
+										},
+										{
+											"key": "company_id",
+											"value": "MIJU"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3496386"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Caso 403",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers/:id?bank_code=072&company_id=MIJU",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers",
+										":id"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "072"
+										},
+										{
+											"key": "company_id",
+											"value": "MIJU"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4496386"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Caso 404",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers/:id?bank_code=071&company_id=MIJU",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers",
+										":id"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "071"
+										},
+										{
+											"key": "company_id",
+											"value": "MIJU"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5496386"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Caso 500",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers/:id?bank_code=073&company_id=MIJU",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers",
+										":id"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "073"
+										},
+										{
+											"key": "company_id",
+											"value": "MIJU"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6496386"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Caso 502",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers/:id?bank_code=074&company_id=MIJU",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers",
+										":id"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "074"
+										},
+										{
+											"key": "company_id",
+											"value": "MIJU"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "7496386"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Caso 503",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers/:id?bank_code=075&company_id=MIJU",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers",
+										":id"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "075"
+										},
+										{
+											"key": "company_id",
+											"value": "MIJU"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "8496386"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Caso 504",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/commercial_cards/prepaid/transfers/:id?bank_code=076&company_id=MIJU",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"commercial_cards",
+										"prepaid",
+										"transfers",
+										":id"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "076"
+										},
+										{
+											"key": "company_id",
+											"value": "MIJU"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9496386"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "echo - Caso 200",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3a7c6458-f199-4c1e-9c42-0388e3fdfc25",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api-dev.prismamediosdepago.com/v1/commercial_cards/prepaid/echo/:var",
+							"protocol": "https",
+							"host": [
+								"api-dev",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"commercial_cards",
+								"prepaid",
+								"echo",
+								":var"
+							],
+							"variable": [
+								{
+									"key": "var",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api-docs - Caso 200",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9ed4e66b-edca-4cb0-948c-10eddf7f9e73",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "https://api-dev.prismamediosdepago.com/v1/commercial_cards/prepaid/api-docs",
+							"protocol": "https",
+							"host": [
+								"api-dev",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"commercial_cards",
+								"prepaid",
+								"api-docs"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Monetización",
+			"item": [
+				{
+					"name": "Reporte monetizacion",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Portal18+",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "cluongo@serv.externos.prismamp.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"fromDate\":\"2020-10-01 00:00:00\", \r\n    \"toDate\":\"2021-12-31 23:59:00\", \r\n    \"showTxDetail\":true, \r\n    \"showSummary\":true,\r\n\r\n    \"transactionTypes\":\r\n    [\r\n        \"PURCHASE\", \r\n        \"CHARGE\", \r\n        \"REFUND\", \r\n        \"CREDIT\", \r\n        \"TERMINATIONFEES\", \r\n        \"RECURRINGFEES\" \r\n    ],\r\n\r\n    \"monetizationPackageIds\":\r\n    [\r\n        \"commercial_cards_prepaid_plan-sbce\"\r\n\r\n    ],\r\n\r\n    \"currencyOption\":\"LOCAL\", \r\n    \r\n    \"groupBy\":\r\n    [ \r\n        \"PACKAGE\", \r\n        \"PRODUCT\", \r\n        \"DEVELOPER\", \r\n        \"APPLICATION\", \r\n        \"RATEPLAN\" \r\n    ],\r\n\r\n    \"transactionCustomAttributes\":\r\n    [\r\n        \"Partner_id\",\r\n        \"CUIT\",\r\n        \"size\"\r\n    ]\r\n}\r\n"
+						},
+						"url": {
+							"raw": "https://api.enterprise.apigee.com/v1/mint/organizations/prisma-d/revenue-reports",
+							"protocol": "https",
+							"host": [
+								"api",
+								"enterprise",
+								"apigee",
+								"com"
+							],
+							"path": [
+								"v1",
+								"mint",
+								"organizations",
+								"prisma-d",
+								"revenue-reports"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5c474a1a-ca57-4593-8118-36a1f18f4311",
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"pm.globals.set(\"token\", data.access_token); "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic MTJxVnZ6VWE5RW9kTjdSMkU0aFVHajdlVVJ3MjdzUWs6eEFmU2FjSEw3dVJ1TWJRUg==",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-qa.prismamediosdepago.com/v1/oauth/accesstoken?grant_type=client_credentials",
+					"protocol": "https",
+					"host": [
+						"api-qa",
+						"prismamediosdepago",
+						"com"
+					],
+					"path": [
+						"v1",
+						"oauth",
+						"accesstoken"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
