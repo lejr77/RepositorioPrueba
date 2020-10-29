@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "d06effb4-42d5-4a6c-a0a1-0905ac426ad3",
+		"name": "Plans",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Merchants Travel Assistance Certificate",
+			"item": [
+				{
+					"name": "Create API Package",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"merchants_ertificate_plan\", //completar\r\n    \"displayName\": \"merchants_ertificate_plan\", //completar\r\n    \"name\": \"merchants_ertificate_plan\", //completar\r\n    \"organization\":\r\n    {\r\n        \"id\": \"prisma-d\"\r\n    },\r\n    \"product\":  //completar\r\n    [\r\n        {\r\n            \"id\": \"merchant_travel_insurance_v1_qa\"\r\n        },\r\n        {\r\n            \"id\": \"merchant_travel_insurance-v1-dev\"\r\n        }\r\n    ],\r\n    \"status\": \"ACTIVE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.enterprise.apigee.com/v1/mint/organizations/prisma-d/monetization-packages",
+							"protocol": "https",
+							"host": [
+								"api",
+								"enterprise",
+								"apigee",
+								"com"
+							],
+							"path": [
+								"v1",
+								"mint",
+								"organizations",
+								"prisma-d",
+								"monetization-packages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Rate Plan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic {{apigee.token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"advance\": false,\r\n\t\"contractDuration\": 1,\r\n\t\"contractDurationType\": \"MONTH\",\r\n\t\"currency\": {\r\n\t\t\"id\": \"ars\"\r\n\t},\r\n\t\"description\": \"merchants_ertificate_plan\",    //completar\r\n\t\"displayName\": \"merchants_ertificate_plan\",    //completar\r\n\t\"earlyTerminationFee\": 0,\r\n\t\"frequencyDuration\": 1,\r\n\t\"frequencyDurationType\": \"MONTH\",\r\n\t\"isPrivate\": false,\r\n\t\"monetizationPackage\": {\r\n\t\t\"id\": \"merchants_ertificate_plan-fuis\"     //completar\r\n\t},\r\n\t\"name\": \"merchants_ertificate_plan\",   //completar\r\n\t\"organization\": {\r\n\t\t\"id\": \"prisma-d\"\r\n\t},\r\n\t\"paymentDueDays\": 30,\r\n\t\"prorate\": false,\r\n\t\"published\": true,\r\n\t\"recurringFee\": 0,\r\n\t\"recurringStartUnit\": 1,\r\n\t\"recurringType\": \"CALENDAR\",\r\n\t\"setUpFee\": 0,\r\n\t\"startDate\": \"2020-10-09 00:00:01\",     //completar\r\n\t\"type\": \"STANDARD\",\r\n\t\"ratePlanDetails\": [{\r\n\t\t\"aggregateFreemiumCounters\": true,\r\n\t\t\"aggregateStandardCounters\": true,\r\n\t\t\"organization\": {\r\n\t\t\t\"id\": \"prisma-d\"\r\n\t\t},\r\n\t\t\"duration\": 1,\r\n\t\t\"durationType\": \"MONTH\",\r\n\t\t\"freemiumDuration\": 0,\r\n\t\t\"freemiumDurationType\": \"MONTH\",\r\n\t\t\"freemiumUnit\": 0,\r\n\t\t\"meteringType\": \"UNIT\",\r\n\t\t\"paymentDueDays\": 30,\r\n\t\t\"ratingParameter\": \"VOLUME\",\r\n\t\t\"revenueType\": \"NET\",\r\n\t\t\"type\": \"RATECARD\",\r\n\t\t\"currency\": {\r\n\t\t\t\"id\": \"ars\"\r\n\t\t},\r\n\t\t\"ratePlanRates\": [{\r\n\t\t\t\"rate\": 0.07,\r\n\t\t\t\"startUnit\": 0,\r\n\t\t\t\"type\": \"RATECARD\"\r\n\t\t}],\r\n\t\t\"product\": {\r\n\t\t\t\"id\": \"merchant_travel_insurance-v1-dev\"      //completar\r\n\t\t}\r\n\t},{\r\n\t\t\"aggregateFreemiumCounters\": true,\r\n\t\t\"aggregateStandardCounters\": true,\r\n\t\t\"organization\": {\r\n\t\t\t\"id\": \"prisma-d\"\r\n\t\t},\r\n\t\t\"duration\": 1,\r\n\t\t\"durationType\": \"MONTH\",\r\n\t\t\"freemiumDuration\": 0,\r\n\t\t\"freemiumDurationType\": \"MONTH\",\r\n\t\t\"freemiumUnit\": 0,\r\n\t\t\"meteringType\": \"UNIT\",\r\n\t\t\"paymentDueDays\": 30,\r\n\t\t\"ratingParameter\": \"VOLUME\",\r\n\t\t\"revenueType\": \"NET\",\r\n\t\t\"type\": \"RATECARD\",\r\n\t\t\"currency\": {\r\n\t\t\t\"id\": \"ars\"\r\n\t\t},\r\n\t\t\"ratePlanRates\": [{\r\n\t\t\t\"rate\": 0.05,\r\n\t\t\t\"startUnit\": 0,\r\n\t\t\t\"type\": \"RATECARD\"\r\n\t\t}],\r\n\t\t\"product\": {\r\n\t\t\t\"id\": \"merchant_travel_insurance_v1_qa\"       //completar\r\n\t\t}\r\n\t}\r\n\t]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.enterprise.apigee.com/v1/mint/organizations/prisma-d/monetization-packages/:id_create_API_package/rate-plans",
+							"protocol": "https",
+							"host": [
+								"api",
+								"enterprise",
+								"apigee",
+								"com"
+							],
+							"path": [
+								"v1",
+								"mint",
+								"organizations",
+								"prisma-d",
+								"monetization-packages",
+								":id_create_API_package",
+								"rate-plans"
+							],
+							"variable": [
+								{
+									"key": "id_create_API_package",
+									"value": "merchants_ertificate_plan-fuis"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept Rate Plan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"developer\": {\n        \"id\": \"96d38dae-c091-4c7c-a2e5-91c8f0ed968e\"        //completar\n    },\n    \"ratePlan\": {\n        \"id\": \"merchants_ertificate_plan-fuis_merchants_ertificate_plan\"      //completar\n    },\n      \"startDate\": \"2020-10-09 00:00:01\",       //completar\n    \"suppressWarning\": false,\n    \"waveTerminationCharge\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.enterprise.apigee.com/v1/mint/organizations/prisma-d/developers/:company_id/developer-rateplans",
+							"protocol": "https",
+							"host": [
+								"api",
+								"enterprise",
+								"apigee",
+								"com"
+							],
+							"path": [
+								"v1",
+								"mint",
+								"organizations",
+								"prisma-d",
+								"developers",
+								":company_id",
+								"developer-rateplans"
+							],
+							"variable": [
+								{
+									"key": "company_id",
+									"value": "96d38dae-c091-4c7c-a2e5-91c8f0ed968e"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
