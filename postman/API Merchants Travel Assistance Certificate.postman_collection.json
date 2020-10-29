@@ -1,0 +1,3716 @@
+{
+	"info": {
+		"_postman_id": "4846c34e-df8d-49d8-9c37-cfa039f04f33",
+		"name": "API Merchants Travel Assistance Certificate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "coverage_status",
+			"item": [
+				{
+					"name": "coverage_status / Gold CR0202",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"13133602\",\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"450995\",\r\n    \"last_four_digits\": \"6221\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/coverage_status",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"coverage_status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "coverage_status / Gold CR0901",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": \"18285928\",\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"406997\",\r\n    \"last_four_digits\": \"0368\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/coverage_status",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"coverage_status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "coverage_status / Platinum",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"30917065\",\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"405071\",\r\n    \"last_four_digits\": \"8330\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/coverage_status",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"coverage_status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "coverage_status / Signature",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"14778577\",\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"402786\",\r\n    \"last_four_digits\": \"1150\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/coverage_status",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"coverage_status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "coverage_status / Corporate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"28572520\",\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"462982\",\r\n    \"last_four_digits\": \"8188\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/coverage_status",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"coverage_status"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "conditions",
+			"item": [
+				{
+					"name": "Bancos especiales",
+					"item": [
+						{
+							"name": "conditions / Gold CR0202 Banco 065",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"18242782\",\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"411828\",\r\n    \"last_four_digits\": \"1931\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/conditions",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"conditions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "conditions / Gold CR0202 Banco 066",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"20535483\",\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"474505\",\r\n    \"last_four_digits\": \"9982\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/conditions",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"conditions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "conditions / Gold CR0202 Banco 087",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"21403422\",\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"424967\",\r\n    \"last_four_digits\": \"4962\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/conditions",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"conditions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "conditions / Gold CR0202 Banco 094",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"10843047\",\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"433441\",\r\n    \"last_four_digits\": \"7225\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/conditions",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"conditions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "conditions / Gold CR0202 Banco 097",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"27110730\",\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"412705\",\r\n    \"last_four_digits\": \"1151\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/conditions",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"conditions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "conditions / Gold CR0202 Banco 268",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"10964489\",\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"448762\",\r\n    \"last_four_digits\": \"1205\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/conditions",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"conditions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "conditions / Gold CR0202 Banco 309",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"11856100\",\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"404212\",\r\n    \"last_four_digits\": \"0107\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/conditions",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"conditions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "conditions / Gold CR0202 Banco 311",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"22131100\",\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"473248\",\r\n    \"last_four_digits\": \"1209\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/conditions",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"conditions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "conditions / Gold CR0202 Banco 468",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"17168861\",\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"424967\",\r\n    \"last_four_digits\": \"2502\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/conditions",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"conditions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "conditions / Gold CR0202 Banco 488",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"11065397\",\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"415463\",\r\n    \"last_four_digits\": \"4317\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/conditions",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"conditions"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "conditions / Gold CR0202",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"13133602\",\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"450995\",\r\n    \"last_four_digits\": \"6221\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/conditions",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"conditions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "conditions / Gold CR0901",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": \"18285928\",\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"406997\",\r\n    \"last_four_digits\": \"0368\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/conditions",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"conditions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "conditions / Platinum",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"30917065\",\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"405071\",\r\n    \"last_four_digits\": \"8330\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/conditions",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"conditions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "conditions / Signature",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"14778577\",\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"402786\",\r\n    \"last_four_digits\": \"1150\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/conditions",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"conditions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "conditions / Corporate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"28572520\",\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"462982\",\r\n    \"last_four_digits\": \"8188\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/conditions",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"conditions"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "features",
+			"item": [
+				{
+					"name": "features / Gold CR0202",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"13133602\",\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"450995\",\r\n    \"last_four_digits\": \"6221\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/features",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"features"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "features / Gold CR0901",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": \"18285928\",\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"406997\",\r\n    \"last_four_digits\": \"0368\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/features",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"features"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "features / Platinum",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"30917065\",\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"405071\",\r\n    \"last_four_digits\": \"8330\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/features",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"features"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "features / Signature",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"14778577\",\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"402786\",\r\n    \"last_four_digits\": \"1150\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/features",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"features"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "features / Corporate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"28572520\",\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"462982\",\r\n    \"last_four_digits\": \"8188\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/features",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"features"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "certificates",
+			"item": [
+				{
+					"name": "Bancos especiales",
+					"item": [
+						{
+							"name": "certificates / Gold CR0202 Banco 065",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"18242782\",\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"411828\",\r\n    \"last_four_digits\": \"1931\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"\",\r\n      \"surname\": \"\",\r\n      \"relationship\": \"\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"certificates"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "065",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "certificates / Gold CR0202 Banco 066",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"20535483\",\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"474505\",\r\n    \"last_four_digits\": \"9982\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"\",\r\n      \"surname\": \"\",\r\n      \"relationship\": \"\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"certificates"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "066",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "certificates / Gold CR0202 Banco 087",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"21403422\",\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"424967\",\r\n    \"last_four_digits\": \"4962\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"\",\r\n      \"surname\": \"\",\r\n      \"relationship\": \"\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"certificates"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "087",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "certificates / Gold CR0202 Banco 094",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"10843047\",\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"433441\",\r\n    \"last_four_digits\": \"7225\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"\",\r\n      \"surname\": \"\",\r\n      \"relationship\": \"\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"certificates"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "094",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "certificates / Gold CR0202 Banco 097",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"27110730\",\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"412705\",\r\n    \"last_four_digits\": \"1151\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"\",\r\n      \"surname\": \"\",\r\n      \"relationship\": \"\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"certificates"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "097",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "certificates / Gold CR0202 Banco 268",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"10964489\",\r\n    \"gender\": \"M\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"448762\",\r\n    \"last_four_digits\": \"1205\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"\",\r\n      \"surname\": \"\",\r\n      \"relationship\": \"\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"certificates"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "268",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "certificates / Gold CR0202 Banco 309",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"11856100\",\r\n    \"gender\": \"M\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"404212\",\r\n    \"last_four_digits\": \"0107\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"\",\r\n      \"surname\": \"\",\r\n      \"relationship\": \"\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"certificates"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "309",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "certificates / Gold CR0202 Banco 311",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"22131100\",\r\n    \"gender\": \"M\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"473248\",\r\n    \"last_four_digits\": \"1209\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"\",\r\n      \"surname\": \"\",\r\n      \"relationship\": \"\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"certificates"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "311",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "certificates / Gold CR0202 Banco 468",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"17168861\",\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"424967\",\r\n    \"last_four_digits\": \"2502\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"\",\r\n      \"surname\": \"\",\r\n      \"relationship\": \"\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+									"protocol": "https",
+									"host": [
+										"api-qa",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"certificates"
+									],
+									"query": [
+										{
+											"key": "bank_code",
+											"value": "468",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "certificates / Gold CR0202 / Titular",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"13133602\",\r\n    \"gender\": \"M\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"450995\",\r\n    \"last_four_digits\": \"6221\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"\",\r\n      \"surname\": \"\",\r\n      \"relationship\": \"\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"certificates"
+							],
+							"query": [
+								{
+									"key": "bank_code",
+									"value": "072",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "certificates / Gold CR0202 / Adicional",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"13133602\",\r\n    \"gender\": \"M\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"450995\",\r\n    \"last_four_digits\": \"6221\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"\",\r\n      \"surname\": \"\",\r\n      \"relationship\": \"\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"certificates"
+							],
+							"query": [
+								{
+									"key": "bank_code",
+									"value": "072",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "features / Gold CR0901 / Titular",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": \"18285928\",\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"406997\",\r\n    \"last_four_digits\": \"0368\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"\",\r\n      \"surname\": \"\",\r\n      \"relationship\": \"\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"certificates"
+							],
+							"query": [
+								{
+									"key": "bank_code",
+									"value": "027",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "features / Gold CR0901  / Adicional",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": \"18285928\",\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"406997\",\r\n    \"last_four_digits\": \"0368\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"\",\r\n      \"surname\": \"\",\r\n      \"relationship\": \"\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"certificates"
+							],
+							"query": [
+								{
+									"key": "bank_code",
+									"value": "027",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "features / Platinum / Titular",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"30917065\",\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"405071\",\r\n    \"last_four_digits\": \"8330\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"\",\r\n      \"surname\": \"\",\r\n      \"relationship\": \"\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"certificates"
+							],
+							"query": [
+								{
+									"key": "bank_code",
+									"value": "072",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "features / Platinum / Adicional",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"30917065\",\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"405071\",\r\n    \"last_four_digits\": \"8330\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"\",\r\n      \"surname\": \"\",\r\n      \"relationship\": \"\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"certificates"
+							],
+							"query": [
+								{
+									"key": "bank_code",
+									"value": "072",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "features / Signature / Titular",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"14778577\",\r\n    \"gender\": \"M\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"402786\",\r\n    \"last_four_digits\": \"1150\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"\",\r\n      \"surname\": \"\",\r\n      \"relationship\": \"\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"certificates"
+							],
+							"query": [
+								{
+									"key": "bank_code",
+									"value": "072",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "features / Signature / Adicional",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"14778577\",\r\n    \"gender\": \"M\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"402786\",\r\n    \"last_four_digits\": \"1150\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"\",\r\n      \"surname\": \"\",\r\n      \"relationship\": \"\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"certificates"
+							],
+							"query": [
+								{
+									"key": "bank_code",
+									"value": "072",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "features / Corporate / Titular",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"28572520\",\r\n    \"gender\": \"M\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"462982\",\r\n    \"last_four_digits\": \"8188\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"\",\r\n      \"surname\": \"\",\r\n      \"relationship\": \"\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"certificates"
+							],
+							"query": [
+								{
+									"key": "bank_code",
+									"value": "072",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "features / Corporate / Adicional",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"type": "text",
+								"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{VarEmisionComercios}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"DNI\",\r\n    \"document_number\": \"28572520\",\r\n    \"gender\": \"M\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"462982\",\r\n    \"last_four_digits\": \"8188\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"\",\r\n      \"surname\": \"\",\r\n      \"relationship\": \"\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"certificates"
+							],
+							"query": [
+								{
+									"key": "bank_code",
+									"value": "072",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Swagger",
+			"item": [
+				{
+					"name": "coverage_status",
+					"item": [
+						{
+							"name": "coverage_status Caso 200",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"456875\",\r\n    \"last_four_digits\": \"6542\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/coverage_status",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"coverage_status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "coverage_status Caso 400",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CIS\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"854562\",\r\n    \"last_four_digits\": \"8954\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/coverage_status",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"coverage_status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "coverage_status Caso 403",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 13,\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"589120\",\r\n    \"last_four_digits\": \"4027\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/coverage_status",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"coverage_status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "coverage_status Caso 500__X",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 88858585,\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"587452\",\r\n    \"last_four_digits\": \"4028\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/coverage_status",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"coverage_status"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "conditions",
+					"item": [
+						{
+							"name": "conditions Caso 200__X",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"402921\",\r\n    \"last_four_digits\": \"4028\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/conditions",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"conditions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "conditions Caso 400 Invalid Card Or Client Information",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"A\",\r\n    \"last_four_digits\": \"1111\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/conditions",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"conditions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "conditions Caso 400 Check Coverage Status",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"D\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"A\",\r\n    \"last_four_digits\": \"1111\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/conditions",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"conditions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "conditions Caso 403",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"125478\",\r\n    \"last_four_digits\": \"0000\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/conditions",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"conditions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "conditions Caso 500",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 90000000,\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"402918\",\r\n    \"last_four_digits\": \"4125\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/conditions",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"conditions"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "features",
+					"item": [
+						{
+							"name": "features Caso 200",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 123456,\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"854213\",\r\n    \"last_four_digits\": \"6321\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/features",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"features"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "features Caso 400 Invalid card or client information",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"562147\",\r\n    \"last_four_digits\": \"8954\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/features",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"features"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "features Caso 400 Check Coverage Status",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 12345678,\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"123254\",\r\n    \"last_four_digits\": \"4587\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/features",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"features"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "features Caso 400 Invalid type of beneficiary",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 1254789,\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"587456\",\r\n    \"last_four_digits\": \"4587\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/features",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"features"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "features Caso 400 Corporate TIS cannot create travel certificates",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 1254459,\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"587546\",\r\n    \"last_four_digits\": \"6584\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/features",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"features"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "features Caso 403",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 25478915,\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"123774\",\r\n    \"last_four_digits\": \"4587\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/features",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"features"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "features Caso 500",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 122556,\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"564873\",\r\n    \"last_four_digits\": \"4158\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/features",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"features"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "certificates__X",
+					"item": [
+						{
+							"name": "certificates Caso 200",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"548762\",\r\n    \"last_four_digits\": \"4026\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"Carlos\",\r\n      \"surname\": \"Lopez\",\r\n      \"relationship\": \"Cardholder\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"certificates"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "certificates Caso 400 Invalid Information",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CIS\",\r\n    \"document_number\": 1,\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"558746\",\r\n    \"last_four_digits\": \"4024\"\r\n  },\r\n  \"language\": \"ESS\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"Laura\",\r\n      \"surname\": \"Lopez\",\r\n      \"relationship\": \"Son\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"certificates"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "certificates Caso 400 Check Coverage Status",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CIS\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"402918\",\r\n    \"last_four_digits\": \"5026\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"Ana\",\r\n      \"surname\": \"Lopez\",\r\n      \"relationship\": \"Daughter\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"certificates"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "certificates Caso 400 Invalid Type Of Beneficiary",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"XXX\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"658975\",\r\n    \"last_four_digits\": \"2103\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"Laura\",\r\n      \"surname\": \"Lopez\",\r\n      \"relationship\": \"Daughter\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"certificates"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "certificates Caso 400 Corporate Cards Cannot Create Travel Certificate",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"yyy\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"542012\",\r\n    \"last_four_digits\": \"4026\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"oods\",\r\n      \"surname\": \"Lopez\",\r\n      \"relationship\": \"Father\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"certificates"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "certificates Caso 403",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"541203\",\r\n    \"last_four_digits\": \"4026\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"Carlos\",\r\n      \"surname\": \"Lopez\",\r\n      \"relationship\": \"Cardh\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"certificates"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "certificates Caso 500",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer {{VarEmisionComercios_DEV}}"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 90000000,\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"402918\",\r\n    \"last_four_digits\": \"4026\"\r\n  },\r\n  \"language\": \"EN\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"Carlos\",\r\n      \"surname\": \"Lopez\",\r\n      \"relationship\": \"Mother\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/certificates",
+									"protocol": "https",
+									"host": [
+										"api-dev",
+										"prismamediosdepago",
+										"com"
+									],
+									"path": [
+										"v1",
+										"merchants_travel_assistance_certificate",
+										"certificates"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5488b380-2602-47f6-b000-24cf9a59f097",
+								"exec": [
+									"var data = JSON.parse(responseBody);\r",
+									"pm.globals.set(\"VarEmisionComercios_DEV\", data.access_token); "
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic a0dnY0FVZVVFdXdyeDRTTGNmMVNsOWEwSXVtWlJ4QVQ6bUdKVENudEVJWWxhMk9UbQ=="
+							}
+						],
+						"url": {
+							"raw": "https://api-qa.prismamediosdepago.com/v1/oauth/accesstoken?grant_type=client_credentials",
+							"protocol": "https",
+							"host": [
+								"api-qa",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"oauth",
+								"accesstoken"
+							],
+							"query": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "echo Caso 200",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{VarEmisionComercios_DEV}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/echo/test",
+							"protocol": "https",
+							"host": [
+								"api-dev",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"echo",
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api-docs Caso 200",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "kGgcAUeUEuwrx4SLcf1Sl9a0IumZRxAT",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{VarEmisionComercios_DEV}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api-dev.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/api-docs",
+							"protocol": "https",
+							"host": [
+								"api-dev",
+								"prismamediosdepago",
+								"com"
+							],
+							"path": [
+								"v1",
+								"merchants_travel_assistance_certificate",
+								"api-docs"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Oauth",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3bded410-7a8b-4cec-ae63-0ed56fcfd1d4",
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"pm.globals.set(\"VarEmisionComercios\", data.access_token); "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic T2psNEJmUko2QlRCNmR5NlJoRjdOMGlJdkZ4cWZFQXE6MXZBQWtrYWJIUGJQNE1wWg==",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-qa.prismamediosdepago.com/v1/oauth/accesstoken?grant_type=client_credentials",
+					"protocol": "https",
+					"host": [
+						"api-qa",
+						"prismamediosdepago",
+						"com"
+					],
+					"path": [
+						"v1",
+						"oauth",
+						"accesstoken"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "echoTest",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{VarEmisionComercios}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/echoTest/ww",
+					"protocol": "https",
+					"host": [
+						"api-qa",
+						"prismamediosdepago",
+						"com"
+					],
+					"path": [
+						"v1",
+						"merchants_travel_assistance_certificate",
+						"echoTest",
+						"ww"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api-docs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{VarEmisionComercios}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/api-docs",
+					"protocol": "https",
+					"host": [
+						"api-qa",
+						"prismamediosdepago",
+						"com"
+					],
+					"path": [
+						"v1",
+						"merchants_travel_assistance_certificate",
+						"api-docs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "echo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "Ojl4BfRJ6BTB6dy6RhF7N0iIvFxqfEAq",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{VarEmisionComercios}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-qa.prismamediosdepago.com/v1/merchants_travel_assistance_certificate/echo/test",
+					"protocol": "https",
+					"host": [
+						"api-qa",
+						"prismamediosdepago",
+						"com"
+					],
+					"path": [
+						"v1",
+						"merchants_travel_assistance_certificate",
+						"echo",
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "e418fc3a-29df-4ac1-b0b9-faf6e9968b14",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d1f85d70-ae44-43d8-a49e-dc8569eb0ec8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

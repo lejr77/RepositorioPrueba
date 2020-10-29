@@ -1,0 +1,33 @@
+{
+   "name": "PRISMA ENVIRONMENT - QA",
+   "values": [
+      {
+         "key": "host",
+         "value": "api-qa.prismamediosdepago.com",
+         "enabled": true
+      },
+      {
+         "key": "base64",
+         "value": "a3k4TzVuQ1FrRzU3dU9wR1lFaml5REFRQ0FENE12WkE6a0FvOGlVMUhJd2I5VFpmdw==",
+         "enabled": true
+      },
+      {
+         "key": "token",
+         "value": "",
+         "enabled": true
+      },
+      {
+         "key": "apikey",
+         "value": "ky8O5nCQkG57uOpGYEjiyDAQCAD4MvZA",
+         "enabled": true
+      },
+      {
+         "key": "apisecret",
+         "value": "kAo8iU1HIwb9TZfw",
+         "enabled": true
+      }
+   ],
+   "_postman_variable_scope": "environment",
+   "_postman_exported_at": "2020-08-11T14:03:28.464Z",
+   "_postman_exported_using": "Postman/7.27.0"
+}

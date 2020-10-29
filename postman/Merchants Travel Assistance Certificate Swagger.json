@@ -1,0 +1,1441 @@
+{
+   "info": {
+      "name": "Merchants Travel Assistance Certificate Swagger",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+   },
+   "item": [
+      {
+         "name": "LOGIN",
+         "item": [
+            {
+               "name": "Get Token",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "var jsonData = JSON.parse(responseBody);\r",
+                           "postman.setEnvironmentVariable(\"token\", jsonData.access_token);"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "GET",
+                  "header": [
+                     {
+                        "key": "Authorization",
+                        "value": "Basic {{base64}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "",
+                        "value": "",
+                        "type": "text",
+                        "disabled": true
+                     }
+                  ],
+                  "url": {
+                     "raw": "https://{{host}}/v1/oauth/accesstoken?grant_type=client_credentials",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "oauth",
+                        "accesstoken"
+                     ],
+                     "query": [
+                        {
+                           "key": "grant_type",
+                           "value": "client_credentials"
+                        }
+                     ]
+                  }
+               },
+               "response": []
+            }
+         ],
+         "protocolProfileBehavior": {}
+      },
+      {
+         "name": "POST/coverage_status",
+         "item": [
+            {
+               "name": "1- coverage_status Caso 200",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([200]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"456875\",\r\n    \"last_four_digits\": \"6542\"\r\n  }\r\n}",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/coverage_status",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "coverage_status"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            },
+            {
+               "name": "2- coverage_status Caso 400",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([400]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CIS\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"854562\",\r\n    \"last_four_digits\": \"8954\"\r\n  }\r\n}",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/coverage_status",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "coverage_status"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            },
+            {
+               "name": "3- coverage_status Caso 403",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([403]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 13,\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"589120\",\r\n    \"last_four_digits\": \"4027\"\r\n  }\r\n}",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/coverage_status",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "coverage_status"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            },
+            {
+               "name": "4- coverage_status Caso 500",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([500]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 88858585,\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"587452\",\r\n    \"last_four_digits\": \"4028\"\r\n  }\r\n}",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/coverage_status",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "coverage_status"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            }
+         ],
+         "protocolProfileBehavior": {}
+      },
+      {
+         "name": "POST/conditions",
+         "item": [
+            {
+               "name": "1- conditions Caso 200",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([200]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"402921\",\r\n    \"last_four_digits\": \"4028\"\r\n  }\r\n}",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/conditions",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "conditions"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            },
+            {
+               "name": "2- conditions Caso 400 Invalid Card Or Client Information",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([400]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"A\",\r\n    \"last_four_digits\": \"1111\"\r\n  }\r\n}",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/conditions",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "conditions"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            },
+            {
+               "name": "3- conditions Caso 400 Check Coverage Status",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([400]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"D\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"A\",\r\n    \"last_four_digits\": \"1111\"\r\n  }\r\n}",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/conditions",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "conditions"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            },
+            {
+               "name": "4- conditions Caso 403",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([403]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"125478\",\r\n    \"last_four_digits\": \"0000\"\r\n  }\r\n}",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/conditions",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "conditions"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            },
+            {
+               "name": "5- conditions Caso 500",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([500]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 90000000,\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"402918\",\r\n    \"last_four_digits\": \"4125\"\r\n  }\r\n}",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/conditions",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "conditions"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            }
+         ],
+         "protocolProfileBehavior": {}
+      },
+      {
+         "name": "POST/features",
+         "item": [
+            {
+               "name": "1- features Caso 200",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([200]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 123456,\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"854213\",\r\n    \"last_four_digits\": \"6321\"\r\n  }\r\n}",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/features",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "features"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            },
+            {
+               "name": "2- features Caso 400 Invalid card or client information",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([400]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"562147\",\r\n    \"last_four_digits\": \"8954\"\r\n  }\r\n}",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/features",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "features"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            },
+            {
+               "name": "3- features Caso 400 Check Coverage Status",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([400]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 12345678,\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"123254\",\r\n    \"last_four_digits\": \"4587\"\r\n  }\r\n}",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/features",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "features"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            },
+            {
+               "name": "4- features Caso 400 Invalid type of beneficiary",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([400]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 1254789,\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"587456\",\r\n    \"last_four_digits\": \"4587\"\r\n  }\r\n}",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/features",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "features"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            },
+            {
+               "name": "5- features Caso 400 Corporate TIS cannot create travel certificates",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([400]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 1254459,\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"587546\",\r\n    \"last_four_digits\": \"6584\"\r\n  }\r\n}",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/features",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "features"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            },
+            {
+               "name": "6- features Caso 403",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([403]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 25478915,\r\n    \"gender\": \"F\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"123774\",\r\n    \"last_four_digits\": \"4587\"\r\n  }\r\n}",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/features",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "features"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            },
+            {
+               "name": "7- features Caso 500",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([500]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 122556,\r\n    \"gender\": \"M\"\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"564873\",\r\n    \"last_four_digits\": \"4158\"\r\n  }\r\n}",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/features",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "features"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            }
+         ],
+         "protocolProfileBehavior": {}
+      },
+      {
+         "name": "POST/certificates",
+         "item": [
+            {
+               "name": "1- certificates Caso 200",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([200]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"548762\",\r\n    \"last_four_digits\": \"4026\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"Carlos\",\r\n      \"surname\": \"Lopez\",\r\n      \"relationship\": \"Cardholder\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}\r\n",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/certificates",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "certificates"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            },
+            {
+               "name": "2- certificates Caso 400 Invalid Information",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([400]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CIS\",\r\n    \"document_number\": 1,\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"558746\",\r\n    \"last_four_digits\": \"4024\"\r\n  },\r\n  \"language\": \"ESS\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"Laura\",\r\n      \"surname\": \"Lopez\",\r\n      \"relationship\": \"Son\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}\r\n",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/certificates",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "certificates"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            },
+            {
+               "name": "3- certificates Caso 400 Check Coverage Status",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([400]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CIS\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"402918\",\r\n    \"last_four_digits\": \"5026\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"Ana\",\r\n      \"surname\": \"Lopez\",\r\n      \"relationship\": \"Daughter\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}\r\n",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/certificates",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "certificates"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            },
+            {
+               "name": "4- certificates Caso 400 Invalid Type Of Beneficiary",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([400]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"XXX\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"658975\",\r\n    \"last_four_digits\": \"2103\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"Laura\",\r\n      \"surname\": \"Lopez\",\r\n      \"relationship\": \"Daughter\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/certificates",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "certificates"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            },
+            {
+               "name": "5- certificates Caso 400 Corporate Cards Cannot Create Travel Certificate",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([400]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"yyy\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"542012\",\r\n    \"last_four_digits\": \"4026\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"oods\",\r\n      \"surname\": \"Lopez\",\r\n      \"relationship\": \"Father\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/certificates",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "certificates"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            },
+            {
+               "name": "6- certificates Caso 403",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([403]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 0,\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"541203\",\r\n    \"last_four_digits\": \"4026\"\r\n  },\r\n  \"language\": \"ES\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"Carlos\",\r\n      \"surname\": \"Lopez\",\r\n      \"relationship\": \"Cardh\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/certificates",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "certificates"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            },
+            {
+               "name": "7- certificates Caso 500",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([500]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "POST",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {
+                     "mode": "raw",
+                     "raw": "{\r\n  \"client\": {\r\n    \"document_type\": \"CI\",\r\n    \"document_number\": 90000000,\r\n    \"gender\": \"F\",\r\n    \"accepts_terms_and_conditions\": true\r\n  },\r\n  \"card\": {\r\n    \"bin\": \"402918\",\r\n    \"last_four_digits\": \"4026\"\r\n  },\r\n  \"language\": \"EN\",\r\n  \"addittional_beneficiaries\": \r\n  [\r\n    {\r\n      \"name\": \"Carlos\",\r\n      \"surname\": \"Lopez\",\r\n      \"relationship\": \"Mother\",\r\n      \"document_number\": \"\",\r\n      \"document_type\": \"\"\r\n    }\r\n  ]\r\n}",
+                     "options": {
+                        "raw": {
+                           "language": "json"
+                        }
+                     }
+                  },
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/certificates",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "certificates"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            }
+         ],
+         "protocolProfileBehavior": {}
+      },
+      {
+         "name": "GET/echo/:var",
+         "item": [
+            {
+               "name": "1- echo Caso 200",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([200]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "GET",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {},
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/echo/:var",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "echo",
+                        ":var"
+                     ],
+                     "query": [],
+                     "variable": [
+                        {
+                           "key": "var",
+                           "value": "test"
+                        }
+                     ]
+                  }
+               },
+               "response": []
+            }
+         ],
+         "protocolProfileBehavior": {}
+      },
+      {
+         "name": "GET/api-docs",
+         "item": [
+            {
+               "name": "1- api-docs Caso 200",
+               "event": [
+                  {
+                     "listen": "test",
+                     "script": {
+                        "exec": [
+                           "pm.test(\"HTTP Code Check\", function () {\r",
+                           "    pm.expect(pm.response.code).to.be.oneOf([200]) });\r"
+                        ],
+                        "type": "text/javascript"
+                     }
+                  }
+               ],
+               "request": {
+                  "method": "GET",
+                  "header": [
+                     {
+                        "key": "apikey",
+                        "value": "{{apikey}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                     }
+                  ],
+                  "body": {},
+                  "url": {
+                     "raw": "https://{{host}}/v1/merchants_travel_assistance_certificate/api-docs",
+                     "protocol": "https",
+                     "host": [
+                        "{{host}}"
+                     ],
+                     "path": [
+                        "v1",
+                        "merchants_travel_assistance_certificate",
+                        "api-docs"
+                     ],
+                     "query": [],
+                     "variable": []
+                  }
+               },
+               "response": []
+            }
+         ],
+         "protocolProfileBehavior": {}
+      }
+   ],
+   "protocolProfileBehavior": {}
+}
