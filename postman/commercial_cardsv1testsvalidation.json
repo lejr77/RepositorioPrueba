@@ -1825,7 +1825,7 @@
             },
             "url": {
               "query": [],
-              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/transactions_1",
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/transactions",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -1835,7 +1835,7 @@
                 "commercial_card_details",
                 "account_cards",
                 "card",
-                "transactions_1"
+                "transactions"
               ]
             }
           },
