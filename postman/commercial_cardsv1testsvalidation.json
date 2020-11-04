@@ -258,7 +258,7 @@
               }
             }
           ],
-          "name": "commercial_cards_v1_post__/account_cards/card/authorizations_404_1",
+          "name": "commercial_cards_v1_post/account_cards/card/authorizations_404_0",
           "request": {
             "method": "POST",
             "header": [
@@ -374,7 +374,7 @@
               }
             }
           ],
-          "name": "commercial_cards_v1_post__/account_cards/card/authorizations_404",
+          "name": "commercial_cards_v1_post__/account_cards/card/authorizations_404_1",
           "request": {
             "method": "POST",
             "header": [
@@ -491,7 +491,7 @@
                   "\tpm.expect(jsonData.card_details.card_denomination).to.eql(\"MONTERO/MARIA\")\r",
                   "\tpm.expect(jsonData.card_details.pending_instalments[0].date).to.eql(\"21/09/2019\")\r",
                   "\tpm.expect(jsonData.card_details.pending_instalments[0].transaction_receipt_number).to.eql(\"00325725\")\r",
-                  "\tpm.expect(jsonData.card_details.pending_instalments[0].merchant_denomination).to.eql(\"DISTRIBUIDORA JS\")\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[0].merchant_denomination).to.eql(\"DISTRIBUIDORAÂ JS\")\r",
                   "\tpm.expect(jsonData.card_details.pending_instalments[0].merchant_category_denomination).to.eql(\"\")\r",
                   "\tpm.expect(jsonData.card_details.pending_instalments[0].instalments_pending_to_be_billed).to.eql(11)\r",
                   "\tpm.expect(jsonData.card_details.pending_instalments[0].instalments_plan).to.eql(12)\r",
@@ -1801,7 +1801,7 @@
               }
             }
           ],
-          "name": "commercial_cards_v1_POST_account_cards_card_transactions_404_2",
+          "name": "commercial_cards_v1_POST_account_cards_card_transactions_404_1",
           "request": {
             "method": "POST",
             "header": [
@@ -1825,7 +1825,7 @@
             },
             "url": {
               "query": [],
-              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/transactions",
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/transactions_1",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -1835,7 +1835,7 @@
                 "commercial_card_details",
                 "account_cards",
                 "card",
-                "transactions"
+                "transactions_1"
               ]
             }
           },
@@ -1859,7 +1859,7 @@
               }
             }
           ],
-          "name": "commercial_cards_v1_POST_account_cards_card_transactions_404_2",
+          "name": "commercial_cards_v1_POST_account_cards_card_transactions_404_1",
           "request": {
             "method": "POST",
             "header": [
@@ -1883,7 +1883,7 @@
             },
             "url": {
               "query": [],
-              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/transactions",
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/transactions_2",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -1893,7 +1893,7 @@
                 "commercial_card_details",
                 "account_cards",
                 "card",
-                "transactions"
+                "transactions_2"
               ]
             }
           },
