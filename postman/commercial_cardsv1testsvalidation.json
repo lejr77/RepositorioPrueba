@@ -491,7 +491,7 @@
                   "\tpm.expect(jsonData.card_details.card_denomination).to.eql(\"MONTERO/MARIA\")\r",
                   "\tpm.expect(jsonData.card_details.pending_instalments[0].date).to.eql(\"21/09/2019\")\r",
                   "\tpm.expect(jsonData.card_details.pending_instalments[0].transaction_receipt_number).to.eql(\"00325725\")\r",
-                  "\tpm.expect(jsonData.card_details.pending_instalments[0].merchant_denomination).to.eql(\"DISTRIBUIDORAÂ JS\")\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[0].merchant_denomination).to.eql(\"DISTRIBUIDORA JS\")\r",
                   "\tpm.expect(jsonData.card_details.pending_instalments[0].merchant_category_denomination).to.eql(\"\")\r",
                   "\tpm.expect(jsonData.card_details.pending_instalments[0].instalments_pending_to_be_billed).to.eql(11)\r",
                   "\tpm.expect(jsonData.card_details.pending_instalments[0].instalments_plan).to.eql(12)\r",
