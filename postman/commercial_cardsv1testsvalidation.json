@@ -1,0 +1,2731 @@
+{
+  "info": {
+    "name": "commercial_cards v1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "LOGIN",
+      "item": [
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"token\", jsonData.access_token);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "Get Token",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic {{base64}}"
+              }
+            ],
+            "url": {
+              "query": [
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials"
+                }
+              ],
+              "raw": "https://{{host}}/v1/oauth/accesstoken?grant_type=client_credentials",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "oauth",
+                "accesstoken"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "GET  /account_cards",
+      "item": [
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(200) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.account.account_number).to.eql(\"4422001199\")\r",
+                  "\tpm.expect(jsonData.account.account_denomination).to.eql(\"SALUD COOP\")\r",
+                  "\tpm.expect(jsonData.account.product).to.eql(\"CR0401\")\r",
+                  "\tpm.expect(jsonData.account.product_denomination).to.eql(\"BUSINESS\")\r",
+                  "\tpm.expect(jsonData.account.limits.purchases).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.limits.instalments).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.limits.advances).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.limits.financiation).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.availables.purchases).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.availables.instalments).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.availables.advances).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.totals.instalments).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.totals.advances).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.totals.credits).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.totals.account_purchases).to.eql(47262.0)\r",
+                  "\tpm.expect(jsonData.account.totals.dollar_account_purchases).to.eql(296.86)\r",
+                  "\tpm.expect(jsonData.account.totals.dollar_instalments).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.totals.dollar_advances).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.totals.dollar_credits).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.totals.other_concepts).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.totals.dollar_other_concepts).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.cards[0].card_number).to.eql(\"4900000000000089\")\r",
+                  "\tpm.expect(jsonData.account.cards[0].card_denomination).to.eql(\"MONTERO/MARIA\")\r",
+                  "\tpm.expect(jsonData.account.cards[0].product).to.eql(\"CR0401\")\r",
+                  "\tpm.expect(jsonData.account.cards[0].product_denomination).to.eql(\"BUSINESS\")\r",
+                  "\tpm.expect(jsonData.account.cards[0].scheme).to.eql(\"\")\r",
+                  "\tpm.expect(jsonData.account.cards[0].totals.instalments).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.cards[0].totals.advances).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.cards[0].totals.credits).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.cards[0].totals.account_purchases).to.eql(4927.2)\r",
+                  "\tpm.expect(jsonData.account.cards[0].totals.dollar_account_purchases).to.eql(0.99)\r",
+                  "\tpm.expect(jsonData.account.cards[0].totals.dollar_instalments).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.cards[0].totals.dollar_advances).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.cards[0].totals.dollar_credits).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.cards[0].totals.other_concepts).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.cards[0].totals.dollar_other_concepts).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.cards[1].card_number).to.eql(\"4900000000000097\")\r",
+                  "\tpm.expect(jsonData.account.cards[1].card_denomination).to.eql(\"CABRAL/FRANCISCO\")\r",
+                  "\tpm.expect(jsonData.account.cards[1].product).to.eql(\"CR0401\")\r",
+                  "\tpm.expect(jsonData.account.cards[1].product_denomination).to.eql(\"BUSINESS\")\r",
+                  "\tpm.expect(jsonData.account.cards[1].scheme).to.eql(\"VI-CR\")\r",
+                  "\tpm.expect(jsonData.account.cards[1].totals.instalments).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.cards[1].totals.advances).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.cards[1].totals.credits).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.cards[1].totals.account_purchases).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.cards[1].totals.dollar_account_purchases).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.cards[1].totals.dollar_instalments).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.cards[1].totals.dollar_advances).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.cards[1].totals.dollar_credits).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.cards[1].totals.other_concepts).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.account.cards[1].totals.dollar_other_concepts).to.eql(0.0)\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_post_account_cards_200",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "query": [
+                {
+                  "key": "company_id",
+                  "value": "E104"
+                },
+                {
+                  "key": "account_number",
+                  "value": "4422001199"
+                },
+                {
+                  "key": "bank_code",
+                  "value": "29"
+                }
+              ],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "POST  /account_cards/card/authorizations",
+      "item": [
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(200) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.card_details.card_number).to.eql(\"4900000000000089\")\r",
+                  "\tpm.expect(jsonData.card_details.card_denomination).to.eql(\"MONTERO/MARIA\")\r",
+                  "\tpm.expect(jsonData.card_details.limits.purchases).to.eql(125000.0)\r",
+                  "\tpm.expect(jsonData.card_details.limits.instalments).to.eql(125000.0)\r",
+                  "\tpm.expect(jsonData.card_details.authorizations[0].date).to.eql(\"27/01/2020\")\r",
+                  "\tpm.expect(jsonData.card_details.authorizations[0].merchant_denomination).to.eql(\"CONSUMO EN PESOS\")\r",
+                  "\tpm.expect(jsonData.card_details.authorizations[0].amount).to.eql(51.0)\r",
+                  "\tpm.expect(jsonData.card_details.authorizations[0].transaction_type).to.eql(\"CONS. $\")\r",
+                  "\tpm.expect(jsonData.card_details.authorizations[1].date).to.eql(\"27/01/2020\")\r",
+                  "\tpm.expect(jsonData.card_details.authorizations[1].merchant_denomination).to.eql(\"CONSUMO EN PESOS\")\r",
+                  "\tpm.expect(jsonData.card_details.authorizations[1].amount).to.eql(2.77)\r",
+                  "\tpm.expect(jsonData.card_details.authorizations[1].transaction_type).to.eql(\"CONS. $\")\r",
+                  "\tpm.expect(jsonData.card_details.authorizations[2].date).to.eql(\"24/01/2020\")\r",
+                  "\tpm.expect(jsonData.card_details.authorizations[2].merchant_denomination).to.eql(\"CONSUMO EN PESOS\")\r",
+                  "\tpm.expect(jsonData.card_details.authorizations[2].amount).to.eql(21.0)\r",
+                  "\tpm.expect(jsonData.card_details.authorizations[2].transaction_type).to.eql(\"CONS. $\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "Caso 200: OK",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_id\" : \"E104\",\n  \"card\" : {\n    \"bin\" : \"490000\",\n    \"last_four_digits\" : \"0089\",\n    \"bank_code\" : \"29\"\n  },\n  \"client\" : {\n    \"document_type\" : \"DNI\",\n    \"document_number\" : \"6028240\",\n    \"gender\" : \"M\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/authorizations",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "card",
+                "authorizations"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(404) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"404\")\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"104\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Card doesn't have any Movement\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_post__/account_cards/card/authorizations_404_1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_id\" : \"E404\",\n  \"card\" : {\n    \"bin\" : \"490000\",\n    \"last_four_digits\" : \"0097\",\n    \"bank_code\" : \"29\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/authorizations",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "card",
+                "authorizations"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(400) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"400\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"204\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Invalid Card\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_post__/account_cards/card/authorizations_400",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_id\" : \"2708\",\n  \"client\" : {\n    \"document_type\" : \"DNI\",\n    \"document_number\" : \"6028240\",\n    \"gender\" : \"M\"\n  },\n  \"card\" : {\n    \"bin\" : \"486649\",\n    \"last_four_digits\" : \"9353\",\n    \"bank_code\" : \"120\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/authorizations",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "card",
+                "authorizations"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(404) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"404\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"109\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Card not found\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_post__/account_cards/card/authorizations_404",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_id\" : \"2704\",\n  \"client\" : {\n    \"document_type\" : \"DNI\",\n    \"document_number\" : \"6028240\",\n    \"gender\" : \"M\"\n  },\n  \"card\" : {\n    \"bin\" : \"486649\",\n    \"last_four_digits\" : \"9353\",\n    \"bank_code\" : \"120\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/authorizations",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "card",
+                "authorizations"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(500) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"500\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Internal Server Error\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_post__/account_cards/card/authorizations_500",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_id\" : \"2750\",\n  \"client\" : {\n    \"document_type\" : \"DNI\",\n    \"document_number\" : \"6028240\",\n    \"gender\" : \"M\"\n  },\n  \"card\" : {\n    \"bin\" : \"486649\",\n    \"last_four_digits\" : \"9353\",\n    \"bank_code\" : \"120\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/authorizations",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "card",
+                "authorizations"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "POST  /account_cards/card/pending_instalments",
+      "item": [
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(200) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.card_details.card_number).to.eql(\"4900000000000089\")\r",
+                  "\tpm.expect(jsonData.card_details.card_denomination).to.eql(\"MONTERO/MARIA\")\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[0].date).to.eql(\"21/09/2019\")\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[0].transaction_receipt_number).to.eql(\"00325725\")\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[0].merchant_denomination).to.eql(\"DISTRIBUIDORA JS\")\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[0].merchant_category_denomination).to.eql(\"\")\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[0].instalments_pending_to_be_billed).to.eql(11)\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[0].instalments_plan).to.eql(12)\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[0].remaining_due_amount).to.eql(\"324.5\")\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[0].dollar_remaining_due_amount).to.eql(\"0.0\")\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[1].date).to.eql(\"22/08/2019\")\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[1].transaction_receipt_number).to.eql(\"00373442\")\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[1].merchant_denomination).to.eql(\"SPORT MASTER\")\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[1].merchant_category_denomination).to.eql(\"\")\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[1].instalments_pending_to_be_billed).to.eql(4)\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[1].instalments_plan).to.eql(6)\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[1].remaining_due_amount).to.eql(\"675.32\")\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[1].dollar_remaining_due_amount).to.eql(\"0.0\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_post_pending_instalments_200",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_id\" : \"E104\",\n  \"card\" : {\n    \"bin\" : \"490000\",\n    \"last_four_digits\" : \"0089\",\n    \"bank_code\" : \"29\"\n  },\n  \"client\" : {\n    \"document_type\" : \"DNI\",\n    \"document_number\" : \"6028240\",\n    \"gender\" : \"M\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/pending_instalments",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "card",
+                "pending_instalments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(404) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"404\")\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"109\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Card not found\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_post_pending_instalments_404",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_id\" : \"E404\",\n  \"card\" : {\n    \"bin\" : \"490000\",\n    \"last_four_digits\" : \"0097\",\n    \"bank_code\" : \"29\"\n  },\n  \"client\" : {\n    \"document_type\" : \"DNI\",\n    \"document_number\" : \"6028240\",\n    \"gender\" : \"M\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/pending_instalments",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "card",
+                "pending_instalments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(400) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"400\")\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"204\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Invalid Card\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_post_pending_instalments_400",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_id\" : \"E204\",\n  \"card\" : {\n    \"bin\" : \"490000\",\n    \"last_four_digits\" : \"0097\",\n    \"bank_code\" : \"29\"\n  },\n  \"client\" : {\n    \"document_type\" : \"DNI\",\n    \"document_number\" : \"6028240\",\n    \"gender\" : \"M\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/pending_instalments",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "card",
+                "pending_instalments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(500) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"500\")\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"109\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Internal Server Error\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_post_pending_instalments_500",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_id\" : \"E500\",\n  \"card\" : {\n    \"bin\" : \"490000\",\n    \"last_four_digits\" : \"0097\",\n    \"bank_code\" : \"29\"\n  },\n  \"client\" : {\n    \"document_type\" : \"DNI\",\n    \"document_number\" : \"6028240\",\n    \"gender\" : \"M\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/pending_instalments",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "card",
+                "pending_instalments"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "GET /company_accounts/account/dates",
+      "item": [
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(404) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"404\")\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"CC-107\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Card doesn't have any Close or Expiration Date\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_get_company_accounts_account_dates_",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "query": [
+                {
+                  "key": "company_id",
+                  "value": "E400"
+                },
+                {
+                  "key": "account_number",
+                  "value": "4422001199"
+                },
+                {
+                  "key": "bank_code",
+                  "value": "29"
+                }
+              ],
+              "raw": "https://{{host}}/v1/commercial_card_details/company_accounts/account/dates",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "company_accounts",
+                "account",
+                "dates"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(200) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.closing_dates.closing_date).to.eql(\"2020-08-11\")\r",
+                  "\tpm.expect(jsonData.closing_dates.next_closing_date).to.eql(\"2020-08-12\")\r",
+                  "\tpm.expect(jsonData.closing_dates.previous_closing_date).to.eql(\"2020-08-13\")\r",
+                  "\tpm.expect(jsonData.expiration_dates.expiration_date).to.eql(\"2020-09-01\")\r",
+                  "\tpm.expect(jsonData.expiration_dates.next_expiration_date).to.eql(\"2020-09-02\")\r",
+                  "\tpm.expect(jsonData.expiration_dates.previous_expiration_date).to.eql(\"2020-10-01\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_get_company_accounts_account_dates_200",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "query": [
+                {
+                  "key": "company_id",
+                  "value": "E200"
+                },
+                {
+                  "key": "account_number",
+                  "value": "4422001199"
+                },
+                {
+                  "key": "bank_code",
+                  "value": "29"
+                }
+              ],
+              "raw": "https://{{host}}/v1/commercial_card_details/company_accounts/account/dates",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "company_accounts",
+                "account",
+                "dates"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "GET /company_accounts",
+      "item": [
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(200) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.company.accounts[0].account_denomination).to.eql(\"SALUD COOP\")\r",
+                  "\tpm.expect(jsonData.company.accounts[0].account_number).to.eql(4422001199)\r",
+                  "\tpm.expect(jsonData.company.accounts[0].product).to.eql(\"CR0401\")\r",
+                  "\tpm.expect(jsonData.company.accounts[0].product_denomination).to.eql(\"BUSINESS\")\r",
+                  "\tpm.expect(jsonData.company.accounts[0].totals.account_purchases).to.eql(47262.0)\r",
+                  "\tpm.expect(jsonData.company.accounts[0].totals.advances).to.eql(0)\r",
+                  "\tpm.expect(jsonData.company.accounts[0].totals.credits).to.eql(0)\r",
+                  "\tpm.expect(jsonData.company.accounts[0].totals.dollar_account_purchases).to.eql(0)\r",
+                  "\tpm.expect(jsonData.company.accounts[0].totals.dollar_advances).to.eql(0)\r",
+                  "\tpm.expect(jsonData.company.accounts[0].totals.dollar_credits).to.eql(0)\r",
+                  "\tpm.expect(jsonData.company.accounts[0].totals.dollar_instalments).to.eql(0)\r",
+                  "\tpm.expect(jsonData.company.accounts[0].totals.dollar_other_concepts).to.eql(0)\r",
+                  "\tpm.expect(jsonData.company.accounts[0].totals.instalments).to.eql(0)\r",
+                  "\tpm.expect(jsonData.company.accounts[0].totals.other_concepts).to.eql(0)\r",
+                  "\tpm.expect(jsonData.company.denomination).to.eql(\"SALUD COOP\")\r",
+                  "\tpm.expect(jsonData.company.id).to.eql(\"E104\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_GET_company_accounts_200",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "query": [
+                {
+                  "key": "bank_code",
+                  "value": "020"
+                },
+                {
+                  "key": "company_id",
+                  "value": "E104"
+                }
+              ],
+              "raw": "https://{{host}}/v1/commercial_card_details/company_accounts",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "company_accounts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(400) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"400\")\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"CC-002\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"company_id parameter format is invalid\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_GET_company_accounts_400",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "query": [
+                {
+                  "key": "bank_code",
+                  "value": "020"
+                },
+                {
+                  "key": "company_id",
+                  "value": "W104"
+                }
+              ],
+              "raw": "https://{{host}}/v1/commercial_card_details/company_accounts",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "company_accounts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(401) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"401\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"001\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Bat Credentials\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_GET_company_accounts_401",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "query": [
+                {
+                  "key": "bank_code",
+                  "value": "020"
+                },
+                {
+                  "key": "company_id",
+                  "value": "W101"
+                }
+              ],
+              "raw": "https://{{host}}/v1/commercial_card_details/company_accounts",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "company_accounts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(403) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"403\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"003\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Not Authorized\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_GET_company_accounts_403",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "query": [
+                {
+                  "key": "bank_code",
+                  "value": "020"
+                },
+                {
+                  "key": "company_id",
+                  "value": "W103"
+                }
+              ],
+              "raw": "https://{{host}}/v1/commercial_card_details/company_accounts",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "company_accounts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(404) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"404\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"101\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Company Not Found\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_GET_company_accounts_404",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "query": [
+                {
+                  "key": "bank_code",
+                  "value": "025"
+                },
+                {
+                  "key": "company_id",
+                  "value": "W106"
+                }
+              ],
+              "raw": "https://{{host}}/v1/commercial_card_details/company_accounts",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "company_accounts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(500) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"500\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"001\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Error Internal Server\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_GET_company_accounts_500",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "query": [
+                {
+                  "key": "bank_code",
+                  "value": "020"
+                },
+                {
+                  "key": "company_id",
+                  "value": "W500"
+                }
+              ],
+              "raw": "https://{{host}}/v1/commercial_card_details/company_accounts",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "company_accounts"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "GET /account_cards",
+      "item": [
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(400) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"400\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"400\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Bad Request\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_GET_account_cards_400",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "query": [
+                {
+                  "key": "company_id",
+                  "value": "F400"
+                },
+                {
+                  "key": "account_number",
+                  "value": "5522001199"
+                },
+                {
+                  "key": "bank_code",
+                  "value": "067"
+                }
+              ],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(403) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"403\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"202\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Account's company_id does not match with the one given\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_GET_account_cards_403",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "query": [
+                {
+                  "key": "company_id",
+                  "value": "F403"
+                },
+                {
+                  "key": "account_number",
+                  "value": "5522001199"
+                },
+                {
+                  "key": "bank_code",
+                  "value": "067"
+                }
+              ],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(404) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"404\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"108\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Account not found\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_GET_account_cards_404_1",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "query": [
+                {
+                  "key": "company_id",
+                  "value": "F405"
+                },
+                {
+                  "key": "account_number",
+                  "value": "5522001199"
+                },
+                {
+                  "key": "bank_code",
+                  "value": "067"
+                }
+              ],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(404) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"404\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"102\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Company doesn't have any Account\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_GET_account_cards_404",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "query": [
+                {
+                  "key": "company_id",
+                  "value": "F404"
+                },
+                {
+                  "key": "account_number",
+                  "value": "5522001199"
+                },
+                {
+                  "key": "bank_code",
+                  "value": "067"
+                }
+              ],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(500) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"500\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Internal Server Error\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_GET_account_cards_500",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "query": [
+                {
+                  "key": "company_id",
+                  "value": "F500"
+                },
+                {
+                  "key": "account_number",
+                  "value": "5522001199"
+                },
+                {
+                  "key": "bank_code",
+                  "value": "067"
+                }
+              ],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "POST /account_cards/card/transactions",
+      "item": [
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(200) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.card_details.card_number).to.eql(\"486649xxxxxx9353\")\r",
+                  "\tpm.expect(jsonData.card_details.card_denomination).to.eql(\"TEST/1\")\r",
+                  "\tpm.expect(jsonData.card_details.limits.purchases).to.eql(3840000.0)\r",
+                  "\tpm.expect(jsonData.card_details.limits.instalments).to.eql(3840000.0)\r",
+                  "\tpm.expect(jsonData.card_details.availables.purchases).to.eql(3345859.32)\r",
+                  "\tpm.expect(jsonData.card_details.availables.instalments).to.eql(3295320.13)\r",
+                  "\tpm.expect(jsonData.card_details.one_payment_exception.limit).to.eql(1.0)\r",
+                  "\tpm.expect(jsonData.card_details.one_payment_exception.from_date).to.eql(\"04/09/2018\")\r",
+                  "\tpm.expect(jsonData.card_details.one_payment_exception.to_date).to.eql(\"30/12/2022\")\r",
+                  "\tpm.expect(jsonData.card_details.instalments_exception.limit).to.eql(235200.0)\r",
+                  "\tpm.expect(jsonData.card_details.instalments_exception.from_date).to.eql(\"13/05/2013\")\r",
+                  "\tpm.expect(jsonData.card_details.instalments_exception.to_date).to.eql(\"13/05/2013\")\r",
+                  "\tpm.expect(jsonData.card_details.movements[0].date).to.eql(\"01/11/2019\")\r",
+                  "\tpm.expect(jsonData.card_details.movements[0].transaction_receipt_number).to.eql(8515)\r",
+                  "\tpm.expect(jsonData.card_details.movements[0].merchant_denomination).to.eql(\"PRUDENTIAL\")\r",
+                  "\tpm.expect(jsonData.card_details.movements[0].merchants_category_denomination).to.eql(\"SEGUROS GENERALES\")\r",
+                  "\tpm.expect(jsonData.card_details.movements[0].transaction_receipt_amount).to.eql(4106.04)\r",
+                  "\tpm.expect(jsonData.card_details.movements[0].transaction_receipt_dollar_amount).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.card_details.movements[0].instalment_number).to.eql(0)\r",
+                  "\tpm.expect(jsonData.card_details.movements[0].number_of_instalments).to.eql(0)\r",
+                  "\tpm.expect(jsonData.card_details.movements[0].transaction_type).to.eql(\"CONSUMO EN PESOS\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_POST_account_cards_card_transactions_200",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"card\" : {\n    \"bank_code\" : \"120\",\n    \"bin\" : \"486649\",\n    \"last_four_digits\" : \"9353\"\n  },\n  \"client\" : {\n    \"document_type\" : \"DNI\",\n    \"document_number\" : \"6028240\",\n    \"gender\" : \"M\"\n  },\n  \"company_id\" : \"2708\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/transactions",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "card",
+                "transactions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(400) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"400\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"400\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Bad Request\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_POST_account_cards_card_transactions_400",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"card\" : {\n    \"bank_code\" : \"120\",\n    \"bin\" : \"486649\",\n    \"last_four_digits\" : \"9353\"\n  },\n  \"client\" : {\n    \"document_type\" : \"DNI\",\n    \"document_number\" : \"6028240\",\n    \"gender\" : \"M\"\n  },\n  \"company_id\" : \"2708\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/transactions",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "card",
+                "transactions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(401) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"401\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"001\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Bad Credentials\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_POST_account_cards_card_transactions_401",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"card\" : {\n    \"bank_code\" : \"120\",\n    \"bin\" : \"486649\",\n    \"last_four_digits\" : \"9353\"\n  },\n  \"client\" : {\n    \"document_type\" : \"DNI\",\n    \"document_number\" : \"6028240\",\n    \"gender\" : \"M\"\n  },\n  \"company_id\" : \"2708\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/transactions",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "card",
+                "transactions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(403) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"403\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"201\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Account's bank_code does not match with the one giveniu\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_POST_account_cards_card_transactions_403",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"card\" : {\n    \"bank_code\" : \"120\",\n    \"bin\" : \"486649\",\n    \"last_four_digits\" : \"9353\"\n  },\n  \"client\" : {\n    \"document_type\" : \"DNI\",\n    \"document_number\" : \"6028240\",\n    \"gender\" : \"M\"\n  },\n  \"company_id\" : \"2708\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/transactions",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "card",
+                "transactions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(404) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"404\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"109\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Card not found\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_POST_account_cards_card_transactions_404_2",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"card\" : {\n    \"bank_code\" : \"120\",\n    \"bin\" : \"486649\",\n    \"last_four_digits\" : \"9353\"\n  },\n  \"client\" : {\n    \"document_type\" : \"DNI\",\n    \"document_number\" : \"6028240\",\n    \"gender\" : \"M\"\n  },\n  \"company_id\" : \"2708\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/transactions",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "card",
+                "transactions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(404) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"404\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"104\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Card doesn't have any Movement\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_POST_account_cards_card_transactions_404_2",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"card\" : {\n    \"bank_code\" : \"094\",\n    \"bin\" : \"450529\",\n    \"last_four_digits\" : \"3544\"\n  },\n  \"client\" : {\n    \"document_type\" : \"DNI\",\n    \"document_number\" : \"6028240\",\n    \"gender\" : \"M\"\n  },\n  \"company_id\" : \"2708\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/transactions",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "card",
+                "transactions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(500) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"500\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"001\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"INTERNAL_SERVER_ERROR\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_POST_account_cards_card_transactions_500",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"card\" : {\n    \"bank_code\" : \"120\",\n    \"bin\" : \"486649\",\n    \"last_four_digits\" : \"9353\"\n  },\n  \"client\" : {\n    \"document_type\" : \"DNI\",\n    \"document_number\" : \"6028240\",\n    \"gender\" : \"M\"\n  },\n  \"company_id\" : \"2708\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/card/transactions",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "card",
+                "transactions"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "POST /account_cards/unnamed_card/transactions",
+      "item": [
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(200) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.card_details.card_number).to.eql(\"3777950148498060\")\r",
+                  "\tpm.expect(jsonData.card_details.card_denomination).to.eql(\"TEST/1\")\r",
+                  "\tpm.expect(jsonData.card_details.limits.purchases).to.eql(3840000.0)\r",
+                  "\tpm.expect(jsonData.card_details.limits.instalments).to.eql(3840000.0)\r",
+                  "\tpm.expect(jsonData.card_details.availables.purchases).to.eql(3345859.32)\r",
+                  "\tpm.expect(jsonData.card_details.availables.instalments).to.eql(3295320.13)\r",
+                  "\tpm.expect(jsonData.card_details.one_payment_exception.limit).to.eql(1.0)\r",
+                  "\tpm.expect(jsonData.card_details.one_payment_exception.from_date).to.eql(\"04/09/2018\")\r",
+                  "\tpm.expect(jsonData.card_details.one_payment_exception.to_date).to.eql(\"30/12/2022\")\r",
+                  "\tpm.expect(jsonData.card_details.instalments_exception.limit).to.eql(235200.0)\r",
+                  "\tpm.expect(jsonData.card_details.instalments_exception.from_date).to.eql(\"13/05/2013\")\r",
+                  "\tpm.expect(jsonData.card_details.instalments_exception.to_date).to.eql(\"13/05/2013\")\r",
+                  "\tpm.expect(jsonData.card_details.movements[0].date).to.eql(\"01/11/2019\")\r",
+                  "\tpm.expect(jsonData.card_details.movements[0].transaction_receipt_number).to.eql(8515)\r",
+                  "\tpm.expect(jsonData.card_details.movements[0].merchant_denomination).to.eql(\"PRUDENTIAL\")\r",
+                  "\tpm.expect(jsonData.card_details.movements[0].merchants_category_denomination).to.eql(\"SEGUROS GENERALES\")\r",
+                  "\tpm.expect(jsonData.card_details.movements[0].transaction_receipt_amount).to.eql(4106.04)\r",
+                  "\tpm.expect(jsonData.card_details.movements[0].transaction_receipt_dollar_amount).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.card_details.movements[0].instalment_number).to.eql(0)\r",
+                  "\tpm.expect(jsonData.card_details.movements[0].number_of_instalments).to.eql(0)\r",
+                  "\tpm.expect(jsonData.card_details.movements[0].transaction_type).to.eql(\"CONSUMO EN PESOS\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_post_/v1/core/commercial_cards_account_cards_unnamed_card_transactions_200",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_id\" : \"1993\",\n  \"card\" : {\n    \"card_number\" : \"3777950148498060\",\n    \"bank_code\" : \"607\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/unnamed_card/transactions",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "unnamed_card",
+                "transactions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(400) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"404\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"105\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Card doesn't have any Authorization\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_post_/v1/core/commercial_cards_account_cards_unnamed_card_transactions_400",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_id\" : \"1994\",\n  \"card\" : {\n    \"card_number\" : \"3777950148498060\",\n    \"bank_code\" : \"607\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/unnamed_card/transactions",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "unnamed_card",
+                "transactions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(400) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"404\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"106\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Card doesn't have any Pending Installment\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_post_/v1/core/commercial_cards_account_cards_unnamed_card_transactions_400_1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_id\" : \"1995\",\n  \"card\" : {\n    \"card_number\" : \"3777950148498060\",\n    \"bank_code\" : \"607\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/unnamed_card/transactions",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "unnamed_card",
+                "transactions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(500) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"500\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Internal Server Error\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_post_/v1/core/commercial_cards_account_cards_unnamed_card_transactions_500",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_id\" : \"1996\",\n  \"card\" : {\n    \"card_number\" : \"3777950148498060\",\n    \"bank_code\" : \"607\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/unnamed_card/transactions",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "unnamed_card",
+                "transactions"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "POST /account_cards/unnamed_card/authorizations",
+      "item": [
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(200) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.card_details.card_number).to.eql(\"486649xxxxxx9353\")\r",
+                  "\tpm.expect(jsonData.card_details.card_denomination).to.eql(\"TEST/1\")\r",
+                  "\tpm.expect(jsonData.card_details.limits.purchases).to.eql(3840000.0)\r",
+                  "\tpm.expect(jsonData.card_details.limits.instalments).to.eql(3840000.0)\r",
+                  "\tpm.expect(jsonData.card_details.authorizations[0].date).to.eql(\"19/06/2020\")\r",
+                  "\tpm.expect(jsonData.card_details.authorizations[0].transaction_receipt_number).to.eql(\"04620\")\r",
+                  "\tpm.expect(jsonData.card_details.authorizations[0].merchant_denomination).to.eql(\"0020358880\")\r",
+                  "\tpm.expect(jsonData.card_details.authorizations[0].merchants_category_denomination).to.eql(\"CONSUMO EN PESOS\")\r",
+                  "\tpm.expect(jsonData.card_details.authorizations[0].transaction_receipt_amount).to.eql(2800.07)\r",
+                  "\tpm.expect(jsonData.card_details.authorizations[0].transaction_receipt_dollar_amount).to.eql(0.0)\r",
+                  "\tpm.expect(jsonData.card_details.authorizations[0].instalment_number).to.eql(0)\r",
+                  "\tpm.expect(jsonData.card_details.authorizations[0].number_of_instalments).to.eql(0)\r",
+                  "\tpm.expect(jsonData.card_details.authorizations[0].transaction_type).to.eql(\"CONS. $\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_post_/account_cards/unnamed_card/authorizations_200",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_id\" : \"1990\",\n  \"card\" : {\n    \"card_number\" : \"3777950148498060\",\n    \"bank_code\" : \"608\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/unnamed_card/authorizations",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "unnamed_card",
+                "authorizations"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(400) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"404\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"105\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Card doesn't have any Authorization\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_post_/account_cards/unnamed_card/authorizations_400",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_id\" : \"1991\",\n  \"card\" : {\n    \"card_number\" : \"3777950148498060\",\n    \"bank_code\" : \"608\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/unnamed_card/authorizations",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "unnamed_card",
+                "authorizations"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(400) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"404\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"106\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Card doesn't have any Pending Installment\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_post_/account_cards/unnamed_card/authorizations_400_1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_id\" : \"1992\",\n  \"card\" : {\n    \"card_number\" : \"3777950148498060\",\n    \"bank_code\" : \"608\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/unnamed_card/authorizations",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "unnamed_card",
+                "authorizations"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(500) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"500\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Internal Server Error\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_post_/account_cards/unnamed_card/authorizations_500",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_id\" : \"1993\",\n  \"card\" : {\n    \"card_number\" : \"3777950148498060\",\n    \"bank_code\" : \"608\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/unnamed_card/authorizations",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "unnamed_card",
+                "authorizations"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "POST /account_cards/unnamed_card/pending_instalments",
+      "item": [
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(200) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.card_details.card_number).to.eql(\"377795xxxxxx8060\")\r",
+                  "\tpm.expect(jsonData.card_details.card_denomination).to.eql(\"TEST/CARDS\")\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[0].date).to.eql(\"\")\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[0].transaction_receipt_number).to.eql(\"\")\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[0].merchant_denomination).to.eql(\"\")\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[0].merchant_category_denomination).to.eql(\"\")\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[0].instalments_pending_to_be_billed).to.eql(0)\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[0].instalments_plan).to.eql(0)\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[0].remaining_due_amount).to.eql(\"0.0\")\r",
+                  "\tpm.expect(jsonData.card_details.pending_instalments[0].dollar_remaining_due_amount).to.eql(\"0.0\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_post_/account_cards/unnamed_card/pending_instalments_200",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_id\" : \"1990\",\n  \"card\" : {\n    \"card_number\" : \"3777950148498060\",\n    \"bank_code\" : \"609\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/unnamed_card/pending_instalments",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "unnamed_card",
+                "pending_instalments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(400) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"404\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"105\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Card doesn't have any Authorization\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_post_/account_cards/unnamed_card/pending_instalments_400",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_id\" : \"1991\",\n  \"card\" : {\n    \"card_number\" : \"3777950148498060\",\n    \"bank_code\" : \"609\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/unnamed_card/pending_instalments",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "unnamed_card",
+                "pending_instalments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(400) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"404\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"106\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Card doesn't have any Pending Installment\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_post_/account_cards/unnamed_card/pending_instalments_400_1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_id\" : \"1992\",\n  \"card\" : {\n    \"card_number\" : \"3777950148498060\",\n    \"bank_code\" : \"609\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/unnamed_card/pending_instalments",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "unnamed_card",
+                "pending_instalments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"HTTP Code Check\", function () {\r",
+                  "\tpm.expect(pm.response.code).to.eql(500) });\r",
+                  "pm.test(\"Body Response Check\", function () {\r",
+                  "\tvar jsonData = pm.response.json();\r",
+                  "\tpm.expect(jsonData.errors[0].code).to.eql(\"500\")\r",
+                  "\tpm.expect(jsonData.errors[0].status).to.eql(\"\")\r",
+                  "\tpm.expect(jsonData.errors[0].title).to.eql(\"Internal Server Error\")\r});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "commercial_cards_v1_post_/account_cards/unnamed_card/pending_instalments_500",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "apikey",
+                "value": "{{apikey}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_id\" : \"1993\",\n  \"card\" : {\n    \"card_number\" : \"3777950148498060\",\n    \"bank_code\" : \"609\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "query": [],
+              "raw": "https://{{host}}/v1/commercial_card_details/account_cards/unnamed_card/pending_instalments",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "v1",
+                "commercial_card_details",
+                "account_cards",
+                "unnamed_card",
+                "pending_instalments"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "host",
+      "value": "api-dev.prismamediosdepago.com",
+      "type": "string"
+    },
+    {
+      "key": "apikey",
+      "value": "GB9dn5Ooah2VNWwR9QouccsuGKivKSYO",
+      "type": "string"
+    },
+    {
+      "key": "apisecret",
+      "value": "AyHoTikMXUhRPKk4",
+      "type": "string"
+    },
+    {
+      "key": "base64",
+      "value": "R0I5ZG41T29haDJWTld3UjlRb3VjY3N1R0tpdktTWU86QXlIb1Rpa01YVWhSUEtrNA==",
+      "type": "string"
+    }
+  ]
+}
