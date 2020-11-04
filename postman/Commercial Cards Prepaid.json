@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "3d48e73e-823b-4503-bc1a-8d55a01ced33",
+		"_postman_id": "de4c4e73-0966-4582-8c29-9caa41dc06d6",
 		"name": "Commercial Cards Prepaid",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -17,7 +17,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b24801c6-97a0-47e8-8c87-5bf8d77b6b31",
+										"id": "fbc4bce8-420f-445a-8948-f4112dc530d1",
 										"exec": [
 											"var data = JSON.parse(responseBody);\r",
 											"pm.globals.set(\"id\", data.transfer_id);"
@@ -242,12 +242,12 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "echoTest",
+					"name": "echoTest__X",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
-								"id": "ed29279a-0b7f-4048-9ff5-2287d5fcb1cd",
+								"id": "dbbfe946-ef1b-49f4-8819-f5669d75a2c6",
 								"exec": [
 									""
 								],
@@ -295,7 +295,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "4c9408e1-7d6c-45ea-838d-fde81ef8b0cb",
+								"id": "881084cc-462c-4460-b3c6-8d96958bd5c7",
 								"exec": [
 									""
 								],
@@ -338,12 +338,12 @@
 					"response": []
 				},
 				{
-					"name": "api-docs",
+					"name": "api-docs__X",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
-								"id": "b4b28b09-f66d-4690-9631-66fd3c4c6e79",
+								"id": "019f6cc4-7e8c-4502-8a88-989250624f3e",
 								"exec": [
 									""
 								],
@@ -393,7 +393,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "8fadd0e1-08c9-4bf6-acfe-d769cc5bbba7",
+										"id": "fa60c6f1-07ab-4089-89a5-ad8ef0b17ad0",
 										"exec": [
 											""
 										],
@@ -449,7 +449,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "7c7c9df3-ca64-4b5b-a1b9-7de97b36ecab",
+										"id": "17bd3315-607e-4fac-868d-2635022f2c59",
 										"exec": [
 											""
 										],
@@ -505,7 +505,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "2f4806a7-5813-4815-a8a5-2a15c233acc6",
+										"id": "5f052856-242d-466e-8915-b4fae37435e7",
 										"exec": [
 											""
 										],
@@ -561,7 +561,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "54d04e87-2d79-4078-b901-b9baf510d0af",
+										"id": "4e04253f-256f-46e6-a4ce-c67c73d0360f",
 										"exec": [
 											""
 										],
@@ -617,7 +617,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "a7eacd29-211a-4737-ae9e-6f2b62310384",
+										"id": "656fe151-0df8-4ba9-af58-2cd167d7dab6",
 										"exec": [
 											""
 										],
@@ -673,7 +673,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "665a4f3f-377d-4999-872d-13298336bd97",
+										"id": "22f92514-5a87-4e6a-b5eb-d4fbed329e37",
 										"exec": [
 											""
 										],
@@ -729,7 +729,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "d5376063-fbeb-4ca3-ae47-3fb6b97cb12a",
+										"id": "a6fcbdb0-acf1-4812-8e15-91ec2985cb3c",
 										"exec": [
 											""
 										],
@@ -785,7 +785,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "5663bf16-d65c-4c76-8f0e-8b0320f53ad8",
+										"id": "126b34d6-26f0-4432-8a0d-9b28e8b73523",
 										"exec": [
 											""
 										],
@@ -841,7 +841,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "5f2ac0d9-579d-4895-ac84-eb05dcc22a18",
+										"id": "7168171e-339f-4351-85d5-d847cf529587",
 										"exec": [
 											""
 										],
@@ -897,7 +897,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c527f894-3524-42b9-b234-88fe3438dfcc",
+										"id": "7340e49f-2982-46fa-944f-a8ad19bf5262",
 										"exec": [
 											""
 										],
@@ -952,7 +952,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "133bc61e-9bdc-46a4-b3fd-daa09210d2d3",
+								"id": "11ecc076-83d3-454a-ba4e-283830f5a143",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -962,7 +962,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "9591bb0c-73e3-4519-8820-110fa2b394ab",
+								"id": "0f3fc2c2-4460-400b-80aa-4861ff0d4d1c",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -1400,7 +1400,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "3a7c6458-f199-4c1e-9c42-0388e3fdfc25",
+								"id": "802810f3-32c3-4595-88d0-8a32a6d7bf11",
 								"exec": [
 									""
 								],
@@ -1448,7 +1448,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "9ed4e66b-edca-4cb0-948c-10eddf7f9e73",
+								"id": "4319011c-65a5-4609-8a05-4c153ed70f10",
 								"exec": [
 									""
 								],
@@ -1549,7 +1549,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "5c474a1a-ca57-4593-8118-36a1f18f4311",
+						"id": "0e90958e-3dfb-453b-834a-0cdcc52ca421",
 						"exec": [
 							"var data = JSON.parse(responseBody);\r",
 							"pm.globals.set(\"token\", data.access_token); "
