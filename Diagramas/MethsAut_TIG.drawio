@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-14T12:03:52.273Z" agent="5.0 (Windows)" etag="5vmals8lxfUO9xao6h7i" version="14.6.13" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-14T12:25:28.552Z" agent="5.0 (Windows)" etag="Tj9pceDUhOoD40ANbnJ2" version="14.6.13" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="868" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -7,29 +7,31 @@
         <mxCell id="--8OfGOdi-1qrSHV2bzc-3" value="404" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.442;entryY=-0.017;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="--8OfGOdi-1qrSHV2bzc-1" target="--8OfGOdi-1qrSHV2bzc-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="--8OfGOdi-1qrSHV2bzc-6" value="200" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="--8OfGOdi-1qrSHV2bzc-1" target="--8OfGOdi-1qrSHV2bzc-7">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="--8OfGOdi-1qrSHV2bzc-6" value="200" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="--8OfGOdi-1qrSHV2bzc-1" target="--8OfGOdi-1qrSHV2bzc-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="170" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="--8OfGOdi-1qrSHV2bzc-1" value="&#xa;&lt;span style=&quot;color: rgb(51 , 102 , 255)&quot;&gt;GET /notification_methods?bank_code=$bank_code&amp;amp;flow=ORANGE&lt;/span&gt;&#xa;&#xa;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="160" y="120" width="300" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="--8OfGOdi-1qrSHV2bzc-2" value="LOTConf=RED" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="--8OfGOdi-1qrSHV2bzc-2" value="&lt;div&gt;LOTConf=RED&lt;span style=&quot;background-color: rgb(255 , 255 , 255)&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(255 , 255 , 255)&quot;&gt;idvMethods=null&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="60" y="220" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="--8OfGOdi-1qrSHV2bzc-5" value="&lt;div style=&quot;font-family: &amp;#34;consolas&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; font-weight: normal ; font-size: 12px ; line-height: 18px&quot;&gt;&lt;div&gt;&lt;pre style=&quot;font-family: &amp;#34;jetbrains mono&amp;#34; , monospace&quot;&gt;&lt;span style=&quot;background-color: rgb(255 , 255 , 255)&quot;&gt;idvMethods=&lt;/span&gt;&lt;span style=&quot;background-color: rgb(255 , 255 , 255)&quot;&gt;notification_methods&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="420" y="320" width="270" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="--8OfGOdi-1qrSHV2bzc-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="--8OfGOdi-1qrSHV2bzc-7" target="--8OfGOdi-1qrSHV2bzc-5">
+        <mxCell id="--8OfGOdi-1qrSHV2bzc-28" value="404" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="--8OfGOdi-1qrSHV2bzc-7" target="--8OfGOdi-1qrSHV2bzc-17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="--8OfGOdi-1qrSHV2bzc-7" value="&lt;div&gt;otp_by_sms=cell_phone&lt;/div&gt;&lt;div&gt;otp_by_email=email&lt;/div&gt;&lt;code class=&quot;java plain&quot;&gt;customer_service=mergue(issuer-prisma)&lt;/code&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="420" y="190" width="260" height="80" as="geometry" />
+          <mxGeometry x="180" y="530" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="--8OfGOdi-1qrSHV2bzc-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="--8OfGOdi-1qrSHV2bzc-9" target="--8OfGOdi-1qrSHV2bzc-11">
+        <mxCell id="--8OfGOdi-1qrSHV2bzc-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="--8OfGOdi-1qrSHV2bzc-9" target="--8OfGOdi-1qrSHV2bzc-11">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="--8OfGOdi-1qrSHV2bzc-9" value="LOTConf" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="384" width="56" height="56" as="geometry" />
+          <mxGeometry x="302" y="10" width="68" height="68" as="geometry" />
         </mxCell>
         <mxCell id="--8OfGOdi-1qrSHV2bzc-12" value="SI" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="--8OfGOdi-1qrSHV2bzc-11" target="--8OfGOdi-1qrSHV2bzc-1">
           <mxGeometry relative="1" as="geometry" />
@@ -48,14 +50,54 @@
         <mxCell id="--8OfGOdi-1qrSHV2bzc-11" value="LOTConf=&#39;ORANGE&#39;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="530" y="30" width="130" height="80" as="geometry" />
         </mxCell>
+        <mxCell id="--8OfGOdi-1qrSHV2bzc-20" value="200" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="--8OfGOdi-1qrSHV2bzc-7" target="--8OfGOdi-1qrSHV2bzc-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="410" y="563" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="330" y="750" />
+              <mxPoint x="540" y="750" />
+              <mxPoint x="540" y="775" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="--8OfGOdi-1qrSHV2bzc-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="--8OfGOdi-1qrSHV2bzc-13" target="--8OfGOdi-1qrSHV2bzc-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="--8OfGOdi-1qrSHV2bzc-13" value="&lt;br&gt;&lt;span style=&quot;color: rgb(51 , 102 , 255)&quot;&gt;GET /notification_methods?bank_code=$bank_code&amp;amp;flow=YELLOW&lt;/span&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="160" y="435" width="300" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="--8OfGOdi-1qrSHV2bzc-16" value="SI" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="--8OfGOdi-1qrSHV2bzc-14" target="--8OfGOdi-1qrSHV2bzc-13">
+        <mxCell id="--8OfGOdi-1qrSHV2bzc-16" value="SI" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="--8OfGOdi-1qrSHV2bzc-14" target="--8OfGOdi-1qrSHV2bzc-13">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="--8OfGOdi-1qrSHV2bzc-14" value="LOTConf=&#39;YELLOW&#39;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="560" y="420" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="--8OfGOdi-1qrSHV2bzc-17" value="&lt;div&gt;&lt;span style=&quot;background-color: rgb(255 , 255 , 255)&quot;&gt;idvMethods=Defauld_&lt;/span&gt;&lt;span style=&quot;background-color: rgb(255 , 255 , 255)&quot;&gt;idvMethods&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="60" y="770" width="210" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="--8OfGOdi-1qrSHV2bzc-19" value="&lt;div&gt;&lt;span style=&quot;background-color: rgb(255 , 255 , 255)&quot;&gt;idvMethods=ResponseIdvMethosd&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="350" y="775" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="--8OfGOdi-1qrSHV2bzc-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.518;entryY=-0.017;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="--8OfGOdi-1qrSHV2bzc-29" target="--8OfGOdi-1qrSHV2bzc-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="--8OfGOdi-1qrSHV2bzc-29" value="&lt;strong style=&quot;text-align: left&quot;&gt;getIDnVMethodList:&lt;/strong&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="290" y="860" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="--8OfGOdi-1qrSHV2bzc-30" value="&lt;span style=&quot;color: rgb(51 , 102 , 255)&quot;&gt;&lt;strong&gt;error 404 ID&amp;amp;V method list not found.&lt;/strong&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="70" y="1030" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="--8OfGOdi-1qrSHV2bzc-33" value="404" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.367;entryY=-0.033;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="--8OfGOdi-1qrSHV2bzc-31" target="--8OfGOdi-1qrSHV2bzc-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="--8OfGOdi-1qrSHV2bzc-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="--8OfGOdi-1qrSHV2bzc-31" target="--8OfGOdi-1qrSHV2bzc-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="--8OfGOdi-1qrSHV2bzc-31" value="&lt;span style=&quot;color: rgb(51 , 102 , 255)&quot;&gt;GET /notification_configurations?bank_code=&quot;$bank_code&quot; (Sin filtrar por flujo, devolveremos todos los métodos de notificación)&lt;/span&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="240" y="950" width="390" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="--8OfGOdi-1qrSHV2bzc-34" value="&lt;div&gt;otp_by_sms=cell_phone&lt;/div&gt;&lt;div&gt;otp_by_email=email&lt;/div&gt;&lt;code class=&quot;java plain&quot;&gt;customer_service=mergue(issuer-prisma)&lt;/code&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="260" y="1050" width="260" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
