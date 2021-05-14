@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-14T12:25:28.552Z" agent="5.0 (Windows)" etag="Tj9pceDUhOoD40ANbnJ2" version="14.6.13" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-14T12:26:36.776Z" agent="5.0 (Windows)" etag="uiObI9Q7ixIeaZt4hsyN" version="14.6.13" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="868" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -85,19 +85,30 @@
           <mxGeometry x="290" y="860" width="50" height="50" as="geometry" />
         </mxCell>
         <mxCell id="--8OfGOdi-1qrSHV2bzc-30" value="&lt;span style=&quot;color: rgb(51 , 102 , 255)&quot;&gt;&lt;strong&gt;error 404 ID&amp;amp;V method list not found.&lt;/strong&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="70" y="1030" width="120" height="60" as="geometry" />
+          <mxGeometry x="60" y="1060" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="--8OfGOdi-1qrSHV2bzc-33" value="404" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.367;entryY=-0.033;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="--8OfGOdi-1qrSHV2bzc-31" target="--8OfGOdi-1qrSHV2bzc-30">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="--8OfGOdi-1qrSHV2bzc-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="--8OfGOdi-1qrSHV2bzc-31" target="--8OfGOdi-1qrSHV2bzc-34">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="--8OfGOdi-1qrSHV2bzc-37" value="200" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="--8OfGOdi-1qrSHV2bzc-31" target="--8OfGOdi-1qrSHV2bzc-34">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="435" y="1030" />
+              <mxPoint x="390" y="1030" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="--8OfGOdi-1qrSHV2bzc-31" value="&lt;span style=&quot;color: rgb(51 , 102 , 255)&quot;&gt;GET /notification_configurations?bank_code=&quot;$bank_code&quot; (Sin filtrar por flujo, devolveremos todos los métodos de notificación)&lt;/span&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="240" y="950" width="390" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="--8OfGOdi-1qrSHV2bzc-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="--8OfGOdi-1qrSHV2bzc-34" target="--8OfGOdi-1qrSHV2bzc-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="--8OfGOdi-1qrSHV2bzc-34" value="&lt;div&gt;otp_by_sms=cell_phone&lt;/div&gt;&lt;div&gt;otp_by_email=email&lt;/div&gt;&lt;code class=&quot;java plain&quot;&gt;customer_service=mergue(issuer-prisma)&lt;/code&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="260" y="1050" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="--8OfGOdi-1qrSHV2bzc-38" value="&lt;span style=&quot;background-color: rgb(255 , 255 , 255)&quot;&gt;idvMethods&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="600" y="1050" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
